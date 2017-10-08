@@ -5,6 +5,29 @@
  *
  * Made By MaterializeCSS.com
  */
+
+/* #leftText{
+  text-align: left;
+ }*/
+#navIcon{
+  padding: 0px;
+  margin-top: -10px;
+}
+
+#colCenter{
+  text-align: center;
+}
+
+
+#map {
+  height: 400px;
+  width: 200000px;
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  padding-right: 5000px;
+}
+
 body{
   background-color: #fbfbff;
 }
