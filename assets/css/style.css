@@ -1,0 +1,296 @@
+
+#navIcon{
+  padding: 0px;
+  margin-top: -10px;
+}
+
+#colCenter{
+  text-align: center;
+}
+
+
+#map {
+  height: 400px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  padding-right: 5000px;
+}
+
+body{
+  background-color: #282b30;
+}
+
+
+p {
+  color: white;
+  font-size: 20px;
+}
+
+h5{
+  color: white;
+}
+
+.button-collapse {
+  color: #133C7D;
+}
+
+#backImg {
+  background-position: 50% 100px !important;
+  height: 350px;
+  background-size: 80%;
+  padding:0px;
+}
+
+  #colbtn{
+    margin-top: 20px;
+    background-color: #133C7D;
+    width: 300px;
+    background-position:center;
+
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: 50px;
+  color: #B11031;
+  position: right;
+}
+
+.page-footer {
+  margin: 0;
+  background-color: #282b30;
+  color:black;
+}
+
+.statement1{
+  padding: 0px;
+  text-align: left;
+  text-shadow:2px 2px 2px #B11031;
+  margin-left: 35px;
+  color:white;
+}
+
+.statement2{
+  text-align: left;
+  text-shadow:2px 2px 0 #000000;
+  margin-right: 20px;
+  margin-left: 45px;
+  color:#B11031;
+}
+
+#login-box {
+  position: relative;
+  margin: 1% auto;
+  width: 600px;
+  height: 400px;
+  background: #FFF;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.modalLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 300px;
+  height: 400px;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  font-weight: 300;
+  font-size: 28px;
+  color:black;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-bottom: 2px solid #000;
+  color: #aaa;
+  transition: 0.2s ease;
+}
+
+input[type="submit"] {
+  margin-top: 28px;
+  width: 100%;
+  height: 32px;
+  background: #133C7D;
+  border: none;
+  border-radius: 3px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.1s ease;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  opacity: 0.8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+input[type="submit"]:active {
+  opacity: 1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+.or {
+  position: absolute;
+  top: 180px;
+  left: 280px;
+  width: 40px;
+  height: 40px;
+  background: #3498DB;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  line-height: 41px;
+  text-align: center;
+  color: #fff;
+}
+
+.modalRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 300px;
+  height: 400px;
+  background: url("torndao1.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 2px 2px 0;
+}
+
+.right .loginwith {
+  display: block;
+  margin-bottom: 40px;
+  padding: 20px;
+  font-size: 28px;
+  color: #FFF;
+  text-align: center;
+}
+
+button.social-signin {
+  margin-bottom: 10px;
+  width: 220px;
+  height: 36px;
+  border: none;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+button.social-signin:hover,
+button.social-signin:focus {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+button.social-signin:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+button.social-signin.facebook {
+  background: #32508E;
+}
+
+button.social-signin.twitter {
+  background: #55ACEE;
+}
+
+button.social-signin.google {
+  background: #DD4B39;
+}
+
+#modal1{
+  background-color:black;
+}
+
+#modal2{
+  background-color:black;
+}
+
+#modal3{
+  background-color:black;
+}
+
+#modal4{
+  background-color:black;
+}
+
+.or1 {
+  position: absolute;
+  top: 140px;
+  left: 320px;
+  width: 40px;
+  height: 40px;
+  background: #3498DB;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  line-height: 41px;
+  text-align: center;
+  color: #fff;
+}
+
+form{
+  margin-left: 20px;
+  margin-bottom: 10px;
+}

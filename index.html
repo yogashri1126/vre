@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>United Volunteer Rescue Association</title>
+    <!-- CSS  -->
+   
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+</head>
+<body>
+    
+
+  <div id="index-banner" class="parallax-container">
+    
+    <div id="backImg" class="parallax"><img src="assets/volunteer_rescue_association.jpg" alt="Unsplashed background img 1"></div>
+    <div class="row">
+      <div class="col s5"><h5 class="statement1"><b><br>Neighbors helping Neighbors<br><br>Volunteer And Respond To Local Disaster Situations<br><br>Get Rescued by Local Volunteers<br><br>Recieve Regular Updates about Disasters<br><br>Check Disaster Activity</b></h5></div>
+      <div class="col s3"></div>
+      <div class="col s4"> 
+
+          <div class="icon-block">
+            <a id="colbtn" class="waves-effect waves-light btn btn-large" onclick="$('#modal1').modal('open');"><i class="material-icons right">add_box</i>Volunteer</a>
+                  
+            <div id="modal1" class="modal">
+              
+              <div class="modal-content">
+                  <div id="login-box">
+                    <div class="modalLeft">
+                      <h1>Sign up</h1>
+    
+                        <input type="text" name="username" placeholder="Username" />
+                        <input type="text" name="email" placeholder="E-mail" />
+                        <input type="password" name="password" placeholder="Password" />
+                        <input type="password" name="password2" placeholder="Retype password" />
+    
+                        <input type="submit" name="signup_submit" value="Sign me up" />
+                        </div>
+  
+                        <div class="modalRight">
+                        <span class="loginwith"><h5>Sign up with<br />social network</h5></span><br />
+    
+                        <button class="social-signin facebook">Facebook</button>
+                        <button class="social-signin twitter">Twitter</button>
+                        <button class="social-signin google">Google+</button>
+                        </div>
+                          <div class="or">OR</div>
+                      </div>
+              </div>
+            </div>
+          </div>
+          
+
+          <!--sign in modal-->
+          <div class="icon-block">
+            <a id="colbtn" class="waves-effect waves-light btn btn-large" onclick="$('#modal2').modal('open');"><i class="material-icons right">input</i>Sign In</a>
+                
+            <div id="modal2" class="modal">
+
+              <div class="modal-content">
+                <h5>Sign in</h5>
+                        <div class="row">
+                          <div class="input-field col s5">
+                            <input id="username" type="text" class="validate">
+                            <label for="username">User name or Email Address</label>
+                        </div>
+                            <div class="col s2"></div>
+                        <div class="input-field col s5">
+                            <input id="password" type="password" class="validate">
+                            <label for="password">Password</label>
+                        </div>
+                       
+                        <span class="loginwith"><h5>Sign in with<br />social network</h5></span><br />
+    
+                        <button class="social-signin facebook">Log in with facebook</button>
+                        <button class="social-signin twitter">Log in with Twitter</button>
+                        <button class="social-signin google">Log in with Google+</button>
+                        </div>
+
+                        <div class="or1">OR</div>
+
+                        <input type="submit" name="signup_submit" value="Sign me in" />
+              </div>
+            </div>
+      
+          </div>
+
+          <div class="icon-block">
+            <a id="colbtn" class="waves-effect waves-light btn btn-large" onclick="$('#modal3').modal('open');"><i class="material-icons right">warning</i>Rescue Me</a>
+            
+             <div id="modal3" class="modal">
+                <div class="modal-content">
+                  <h5 class="center">We are searching for a Volunteer in your area</h5>
+                </div>
+                  <div class="row">
+                    <div class="col s2"></div>
+                        <div class="progress col s8" >
+                          <div class="indeterminate col s8"></div>
+                        </div>
+                    <div class="col s2"></div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="icon-block">
+            <a id="colbtn" class="waves-effect waves-light btn btn-large"  onclick="$('#modal4').modal('open');"><i class="material-icons right">link</i>Get Updates</a>
+            
+            <div id="modal4" class="modal">
+                <div class="modal-content">
+                  <h5 class="center">Sign up for regular notifications</h5>
+                </div>
+                
+                 <form action="#">
+                       <p>
+                         <input type="checkbox" id="test5" />
+                         <label for="test5">Monthly</label>
+                       
+                          <input type="checkbox" id="test6" />
+                         <label for="test6">Quarterly</label>
+                       </p>
+                      
+                  </form>
+              </div>
+          </div>
+
+        </div>
+      
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s6 m6">
+          <div class="icon-block">
+            <p class="light">Select Active Sites to view current reports from the USGA, and NOAA from the interactive map below</p>
+            <a id="colbtn" class="waves-effect waves-light btn btn-large"><i class="material-icons right">info</i>Active Sites</a>
+          </div>
+        </div>
+        <div class="col s6 m6">
+          <div class="input-group">
+                  <p class="light">Enter your street address to see if you are in an active disaster area</p>
+                  <a id="colbtn" class="waves-effect waves-light btn btn-large">Enter Address</a>
+                  <input id="address" type="text" class="form-control" placeholder="Street Address">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">  
+      
+        </div>
+      </div>
+    </div>
+    <div id="map"><h5 class="center">Active Disaster Map</h5></div>
+  </div>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col 12 s12">
+          <h5 class="light">Disclaimer</h5>
+          <p class="light">The United Volunteer Rescue Association is a tool used that connects individuals with volunteers in the event of a crisis situation. The United Volunteer Rescue Association is not responsible for personal injury up to and including death. If you are in immediate need of rescue, please call 911</p>
+
+       </div>
+  
+      </div>
+    </div>
+
+      
+
+
+
+  </footer>
+  
+  <script src="assets/js/index.js"></script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAes8pj28HLstDedaTrJ02ftQYKoNCcaZ8&callback=initMap">
+  </script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="assets/js/materialize.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+    $('.parallax').parallax();
+
+    //initialize the modal
+    $('.modal').modal();
+
+
+});
+  </script>
+
+  <script src="assets/js/init.js"></script>
+
+  </body>
+</html>
