@@ -1,4 +1,59 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
 
+#nav{
+  background-color: white;
+}
+
+#tColor{
+  padding-right: 10px;
+
+}
+
+#navText{
+  padding-left: 10px;
+  color: black;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 20px;
+}
+
+#formText{
+  color: white;
+}
+
+ #logo-container{
+  color: black;
+ }
+ #tColor{
+  color: black;
+ }
+
+ #leftText{
+  color: white;
+  text-align: center;
+ }
+#logopic{
+  width: 26%;
+}
+
+ #icolor{
+  color: red;
+  font-size: 40px;
+ }
+#navbtn{
+    background-color: #000cff;
+    font-size: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+ span{
+  display: inline-flex;
+ }
 #navIcon{
   padding: 0px;
   margin-top: -10px;
@@ -11,43 +66,40 @@
 
 #map {
   height: 400px;
-  width: 100%;
+  width: 200000px;
   margin: 0px;
   padding: 0px;
   float: left;
-  padding-right: 5000px;
+  padding-right: 2000px;
 }
 
 body{
-  background-color: #282b30;
+  background-color: #181818;
 }
 
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
 
 p {
-  color: white;
-  font-size: 20px;
-}
-
-h5{
-  color: white;
+  line-height: 2rem;
 }
 
 .button-collapse {
-  color: #133C7D;
+  color: #26a69a;
 }
 
 #backImg {
   background-position: 50% 100px !important;
   height: 350px;
-  background-size: 80%;
-  padding:0px;
+  background-size: 100%;
 }
 
   #colbtn{
     margin-top: 20px;
-    background-color: #133C7D;
+    background-color: #000cff;
     width: 300px;
-    background-position:center;
 
 }
 
@@ -82,59 +134,14 @@ h5{
 }
 .icon-block .material-icons {
   font-size: 50px;
-  color: #B11031;
-  position: right;
+  color: red;
 }
 
-.page-footer {
+footer.page-footer {
   margin: 0;
-  background-color: #282b30;
-  color:black;
+  background-color: #282828;
 }
-
-.statement1{
-  padding: 0px;
-  text-align: left;
-  text-shadow:2px 2px 2px #B11031;
-  margin-left: 35px;
-  color:white;
-}
-
-.statement2{
-  text-align: left;
-  text-shadow:2px 2px 0 #000000;
-  margin-right: 20px;
-  margin-left: 45px;
-  color:#B11031;
-}
-
-#login-box {
-  position: relative;
-  margin: 1% auto;
-  width: 600px;
-  height: 400px;
-  background: #FFF;
-  border-radius: 2px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-.modalLeft {
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-sizing: border-box;
-  padding: 40px;
-  width: 300px;
-  height: 400px;
-}
-
-h1 {
-  margin: 0 0 20px 0;
-  font-weight: 300;
-  font-size: 28px;
-  color:black;
-}
-
+/*////////////////////////////////////////////////////////////////////*/
 input[type="text"],
 input[type="password"] {
   display: block;
