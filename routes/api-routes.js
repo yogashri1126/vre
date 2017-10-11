@@ -33,7 +33,13 @@ module.exports = function(app) {
     if (vol){
     db.Vol.create({
       name: req.body.name,
-      address: req.body.address //there will be mre parameters
+      coordinate: req.body.coordinate //converted the address to a coordinate using the mapbox API
+      email: req.body.email
+      password: req.body.password
+      phone: req.body.phone
+      emergency: req.body.emergency
+      emerphone: req.body.emerphone
+      travel: req.body.travel
 
     }).then(function(dbvre) {
       // We have access to the new vre as an argument inside of the callback function
@@ -49,7 +55,13 @@ module.exports = function(app) {
   if(resq)
     {db.ResQ.create({
       name: req.body.name,
-      address: req.body.address
+      coordinate: req.body.coordinate //converted the address to a coordinate using the mapbox API
+      email: req.body.email
+      password: req.body.password
+      phone: req.body.phone
+      emergency: req.body.emergency
+      emerphone: req.body.emerphone
+      travel: req.body.travel
 
     }).then(function(dbvre) {
       // We have access to the new vre as an argument inside of the callback function
