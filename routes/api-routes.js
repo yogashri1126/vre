@@ -6,73 +6,61 @@
 // =============================================================
 
 // Requiring our models
+//assume our db= vre
+//two tables: volunteer (Vol) and rescuee (resQ)
 var db = require("../models");
+var vol= require("../info") //we will need to make another js file containing all the information for the volunteers
+
 
 // Routes
 // =============================================================
 module.exports = function(app) {
 
-  // GET route for getting all of the todos
-  app.get("/api/todos", function(req, res) {
+  // GET route for getting all of the participants
+  app.get("/api/vre", function(req, res) {
     // findAll returns all entries for a table when used with no options
-    db.Todo.findAll({}).then(function(dbTodo) {
-      // We have access to the todos as an argument inside of the callback function
-      res.json(dbTodo);
+    db.vre.findAll({}).then(function(dbvre) {
+      // We have access to the vre as an argument inside of the callback function
+      res.json(dbvre);
     });
   });
 
-  // POST route for saving a new todo
-  app.post("/api/todos", function(req, res) {
+  // POST route for saving a new vre
+  app.post("/api/vre", function(req, res) {
     // create takes an argument of an object describing the item we want to
     // insert into our table. In this case we just we pass in an object with a text
     // and complete property (req.body)
-    db.Todo.create({
-      text: req.body.text,
-      complete: req.body.complete
-    }).then(function(dbTodo) {
-      // We have access to the new todo as an argument inside of the callback function
-      res.json(dbTodo);
+    if (vol){
+    db.Vol.create({
+      name: req.body.name,
+      address: req.body.address //there will be mre parameters
+
+    }).then(function(dbvre) {
+      // We have access to the new vre as an argument inside of the callback function
+      res.json(dbvre);
     })
     .catch(function(err) {
       // Whenever a validation or flag fails, an error is thrown
       // We can "catch" the error to prevent it from being "thrown", which could crash our node app
       res.json(err);
     });
-  });
+  }
 
-  // DELETE route for deleting todos. We can get the id of the todo to be deleted from
-  // req.params.id
-  app.delete("/api/todos/:id", function(req, res) {
-    // We just have to specify which todo we want to destroy with "where"
-    db.Todo.destroy({
-      where: {
-        id: req.params.id
-      }
-    }).then(function(dbTodo) {
-      res.json(dbTodo);
-    });
+  if(resq)
+    {db.ResQ.create({
+      name: req.body.name,
+      address: req.body.address
 
-  });
-
-  // PUT route for updating todos. We can get the updated todo data from req.body
-  app.put("/api/todos", function(req, res) {
-
-    // Update takes in an object describing the properties we want to update, and
-    // we use where to describe which objects we want to update
-    db.Todo.update({
-      text: req.body.text,
-      complete: req.body.complete
-    }, {
-      where: {
-        id: req.body.id
-      }
-    }).then(function(dbTodo) {
-      res.json(dbTodo);
+    }).then(function(dbvre) {
+      // We have access to the new vre as an argument inside of the callback function
+      res.json(dbvre);
     })
     .catch(function(err) {
       // Whenever a validation or flag fails, an error is thrown
       // We can "catch" the error to prevent it from being "thrown", which could crash our node app
       res.json(err);
-    });
+    });}
+
   });
+
 };
