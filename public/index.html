@@ -447,33 +447,137 @@
         </div>
         <div class="col s12 m4">
          <div class="icon-block">
-            <a id="colbtn" class="waves-effect waves-light btn btn-large" onclick="$('#modal2').modal('open');"><i class="material-icons right">link</i>Sign Up</a>
-             <p id="leftText" class="light">Sign Up and Receive Regular Updates</p>    
-            <div id="modal2" class="modal">
+            <a id="colbtn" class="waves-effect waves-light btn btn-large" onclick="$('#modal4').modal('open');"><i class="material-icons right">link</i>Sign Up</a>
+             <p id="leftText" class="light">Sign up for rescue services</p>    
+            <div id="modal4" class="modal">
 
               <div class="modal-content">
-                <h5>Sign in</h5>
+                <h5>Sign up for rescue services</h5>
                         <div class="row">
                           <div class="input-field col s5">
-                            <input id="username" type="text" class="validate">
-                            <label for="username">User name or Email Address</label>
+                            <input id="firstname" type="text" class="validate">
+                            <label for="firstname">First Name</label>
+                        </div>
+                            <div class="col s2"></div>
+                        <div class="input-field col s5">
+                            <input id="lastname" type="text" class="validate">
+                            <label for="lastname">Last Name</label>
+                        </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="input-field col s5">
+                            <input id="email" type="text" class="validate">
+                            <label for="email">Email Address</label>
                         </div>
                             <div class="col s2"></div>
                         <div class="input-field col s5">
                             <input id="password" type="password" class="validate">
                             <label for="password">Password</label>
                         </div>
-                       
-                        <span class="loginwith">Sign in with<br />social network</span><br />
+                        </div>
+                          
+                          <div class="row">
+                           <div class="input-field col s6">
+                            <input id="phoneNumber" type="text" class="validate" required>
+                            <label for="phoneNumber">Phone Number</label>
+                          </div>
+                              
+                       </div> 
+                           <div class="row">
+                           <div class="input-field col s12">
+                            <input id="address" type="text" class="validate" required>
+                            <label for="address">Street Address</label>
+                          </div>
+                       </div>
+
+                  <div class="row">
+                           <div class="input-field col s5">
+                            <input id="city" type="text" class="validate" required>
+                            <label for="city">City</label>
+                          </div>
+                             <span class="col s5"> 
+                              <select id="state" class="browser-default" required>
+                              <option value="">State</option>
+                              <option value="1">Alabama</option>
+                              <option value="2">Alaska</option>
+                              <option value="3">Arizona</option>
+                              <option value="4">Arkansas</option>
+                              <option value="5">California</option>
+                              <option value="6">Colorado</option>
+                              <option value="7">Connecticut</option>
+                              <option value="8">Delaware</option>
+                              <option value="9">Florida</option>
+                              <option value="10">Georgia</option>
+                              <option value="11">Hawaii</option>
+                              <option value="12">Idaho</option>
+                              <option value="13">Illinois</option>
+                              <option value="14">Indiana</option>
+                              <option value="15">Iowa</option>
+                              <option value="16">Kansas</option>
+                              <option value="17">Kentucky</option>
+                              <option value="18">Louisiana</option>
+                              <option value="19">Maine</option>
+                              <option value="20">Maryland</option>
+                              <option value="21">Massachusetts</option>
+                              <option value="22">Michigan</option>
+                              <option value="23">Minnesota</option>
+                              <option value="24">Mississippi</option>
+                              <option value="25">Missouri</option>
+                              <option value="26">Montana</option>
+                              <option value="27">Nebraska</option>
+                              <option value="28">Nevada</option>
+                              <option value="29"> New Hampshire</option>
+                              <option value="30">New Jersey</option>
+                              <option value="31">New Mexico</option>
+                              <option value="32">New York</option>
+                              <option value="33">North Carolina</option>
+                              <option value="34">North Dakota</option>
+                              <option value="35">Ohio</option>
+                              <option value="36">Oklahoma</option>
+                              <option value="37">Oregon</option>
+                              <option value="37">Pennsylvania</option>
+                              <option value="39">Rhode Island</option>
+                              <option value="40">South Carolina</option>
+                              <option value="41">South Dakota</option>
+                              <option value="42">Tennessee</option>
+                              <option value="43">Texas</option>
+                              <option value="44">Utah</option>
+                              <option value="45">Vermont</option>
+                              <option value="46">Virginia</option>
+                              <option value="47">Washington</option>
+                              <option value="48">West Virginia</option>
+                              <option value="49">Wisconsin</option>
+                              <option value="50">Wyoming</option>
+                            </select>
+                          </span>
+                          <div class="input-field col s2">
+                            <input id="zip" type="text" class="validate" required>
+                            <label for="zip">Zip Code</label>
+                          </div>
+                       </div> 
+
+                       <div class="row">
+                           <div class="input-field col s6">
+                            <input id="emerg" type="text" class="validate" required>
+                            <label for="emerg">Emergency Contact</label>
+                          </div>
+                            <div class="input-field col s3">
+                            <input id="relationship" type="text" class="validate" required>
+                            <label for="relationship">Relationship</label>
+                          </div>
+
+                        <div>
+                        <span class="loginwith">Sign Up with your favorite social network</span><br />
     
                         <button class="social-signin facebook">Log in with facebook</button>
                         <button class="social-signin twitter">Log in with Twitter</button>
                         <button class="social-signin google">Log in with Google+</button>
                         </div>
 
-                        <div class="or1">OR</div>
+                       
 
-                        <input id="signUp" type="submit" name="signup_submit" value="Sign me in" />
+                        <input id="signUp" type="submit" name="signup_submit" value="Sign Me Up!" />
               </div>
             </div>
       </div>
@@ -489,7 +593,7 @@
 
         </div>
       </div>
-
+      </div>
     </div>
   </div>
 
