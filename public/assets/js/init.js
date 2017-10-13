@@ -1,7 +1,7 @@
 (function($){
   $(function(){
 
-    $('.button-collapse').sideNav();
+   
     $('.parallax').parallax();
 
   }); // end of document ready
@@ -12,4 +12,17 @@ $(document).ready(function() {
     $('#modal2').modal();
     $('#modal3').modal();
     $('#modal4').modal();
+    $('#modal6').modal();
+    $('.collapsible').collapsible();
+        $('.carousel').carousel();
+
+    autoplay()   
+    function autoplay() {
+        $('.carousel').carousel('next');
+        setTimeout(autoplay, 4500);
+}
+
+$('.carousel.carousel-slider').carousel({fullWidth: true});
+        
 });
+

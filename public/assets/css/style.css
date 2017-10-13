@@ -6,8 +6,18 @@
  * Made By MaterializeCSS.com
  */
 
+.carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    perspective: 2000px;
+    transform-style: preserve-3d;
+    transform-origin: 0% 50%;
+  }
+
+
 #nav{
-  background-color: white;
+  background-color: #282b30;
 }
 
 #tColor{
@@ -17,8 +27,7 @@
 
 #navText{
   padding-left: 10px;
-  color: black;
-  font-family: Impact, Charcoal, sans-serif;
+  color: white;
   font-size: 20px;
 }
 
@@ -26,30 +35,17 @@
   color: white;
 }
 
- #logo-container{
-  color: black;
- }
- #tColor{
-  color: black;
- }
-
  #leftText{
   color: white;
   text-align: center;
  }
-#logopic{
-  width: 26%;
-}
 
- #icolor{
-  color: red;
-  font-size: 40px;
- }
 #navbtn{
-    background-color: #000cff;
-    font-size: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
+    background-color: #133C7D;
+    font-size: 20px;
+    
+    color:white;
+    height: 50px;
   }
  span{
   display: inline-flex;
@@ -75,16 +71,10 @@
 
 body{
   background-color: #181818;
+  color: white;
 }
 
-nav ul a,
-nav .brand-logo {
-  color: #444;
-}
 
-p {
-  line-height: 2rem;
-}
 
 .button-collapse {
   color: #26a69a;
@@ -96,9 +86,25 @@ p {
   background-size: 100%;
 }
 
+#backImg1 {
+  width: 100%;
+  background-size: 100%;
+  background-position: 50% 100px !important
+  background-color:grey;
+  padding-right:900px;
+  opacity: 0.7;
+  margin-left: 100px;
+  margin-right: 900px;
+  text-align:left;
+  font-size: 45px;
+  color:#133C7D;
+  text-shadow:2px 2px 2px #000000;
+}
+
   #colbtn{
     margin-top: 20px;
-    background-color: #000cff;
+    font-size: 20px;
+    background-color: #133C7D;
     width: 300px;
 
 }
@@ -133,8 +139,8 @@ p {
   padding: 0 15px;
 }
 .icon-block .material-icons {
-  font-size: 50px;
-  color: red;
+  font-size: 40px;
+  color: #B11031;
 }
 
 footer.page-footer {
@@ -194,34 +200,6 @@ input[type="submit"]:active {
   transition: 0.1s ease;
 }
 
-.or {
-  position: absolute;
-  top: 180px;
-  left: 280px;
-  width: 40px;
-  height: 40px;
-  background: #3498DB;
-  border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  line-height: 41px;
-  text-align: center;
-  color: #fff;
-}
-
-.modalRight {
-  position: absolute;
-  top: 0;
-  right: 0;
-  box-sizing: border-box;
-  padding: 40px;
-  width: 300px;
-  height: 400px;
-  background: url("torndao1.jpg");
-  background-size: cover;
-  background-position: center;
-  border-radius: 0 2px 2px 0;
-}
-
 .right .loginwith {
   display: block;
   margin-bottom: 40px;
@@ -269,35 +247,75 @@ button.social-signin.google {
 
 #modal1{
   background-color:black;
+  color:white;
 }
 
 #modal2{
   background-color:black;
+  color:white;
 }
 
 #modal3{
   background-color:black;
+  color:white;
 }
 
 #modal4{
   background-color:black;
+  color:white;
 }
 
-.or1 {
-  position: absolute;
-  top: 140px;
-  left: 320px;
-  width: 40px;
-  height: 40px;
-  background: #3498DB;
-  border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  line-height: 41px;
-  text-align: center;
-  color: #fff;
+#modal6{
+  background-color:black;
+  color:white;
 }
 
 form{
   margin-left: 20px;
   margin-bottom: 10px;
+}
+
+
+input[type="submit1"] {
+  margin: 30px;
+  width: 90%;
+  height: 40px;
+  background: #B11031;
+  border: none;
+  border-radius: 3px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align:center;
+  transition: 0.1s ease;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+}
+
+input[type="submit1"]:hover,
+input[type="submit1"]:focus {
+  opacity: 0.8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+input[type="submit1"]:active {
+  opacity: 1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+#state{
+  background-color: black;
+}
+
+#userStory{
+  font-size:20px;
+}
+
+#storyIcon{
+  color:#133C7D;
+  padding: 0px;
+  margin: 0px;
 }
