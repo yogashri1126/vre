@@ -46,8 +46,20 @@ animTAB: $("#animTAB").val.trim(),
 comDriver: $("#trim").val.trim(),
 formTextEquip: $("#formTextEquip").val.trim(),
 formTextSkill: $("#formTextSkill").val.trim(),
-modalNote: $("#modalNote").val.trim(),
+modalNote: $("#modalNote").val.trim()
 ]
 });
+
+$('#signIn').on('click', function(event) {
+      event.preventDefault();
+      var singIn = [
+      username: $("#username").val.trim(),
+      password: $("#password").val.trim(),
+      ]
+  });
+
+
+
+$.post("/api/routes", SignIn)
 
 $.post("/api/api-routes", volunteer);
