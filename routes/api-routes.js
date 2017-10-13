@@ -110,8 +110,8 @@ modalNote: req.body.modalNote
 
   });
 
-  function addToCoordinates(){
-    var address = vol.address;
+  function addToCoordinates(add,state,city){
+    var address = add+" "+city+" "+state;
     directionsURL = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + address + '.json?' +
     'access_token=pk.eyJ1IjoiYmJtYXBib3giLCJhIjoiY2o1Njl0eXdjMGs4eTJ4dDYxd2htdG1nMyJ9.RkRe_pnUD1Tc-b8Re7SWKw';
 
