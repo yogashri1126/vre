@@ -3,38 +3,51 @@
 //put jQuery here
 //make ajax request $post here
 
-// var volunteer= [
-//name: ($name).val.trim(), 
-//address: ($address).val.trim(), 
-//January: ($January).val.trim(),
-//February: ($February).val.trim(),
-//March: ($March).val.trim(),
-//April: ($April).val.trim(),
-//May: ($May).val.trim(),
-//June: ($June).val.trim(),
-//July: ($July).val.trim(),
-//August: ($August).val.trim(),
-//September: ($September).val.trim(),
-//October: ($October).val.trim(),
-//November: ($November).val.trim(),
-//December: ($December).val.trim(),
-//Truck: ($Truck).val.trim(),
-//etc etc it depends on the materials y'all asked of them and the occupation y'all ask of them]
+$('#addVol').on('click', function(event) {
+      event.preventDefault();
 
-// var rescuee= [
-//name: ($name).val.trim(), 
-//address: ($address).val.trim(), 
-//January: ($January).val.trim(),
-//February: ($February).val.trim(),
-//March: ($March).val.trim(),
-//April: ($April).val.trim(),
-//May: ($May).val.trim(),
-//June: ($June).val.trim(),
-//July: ($July).val.trim(),
-//August: ($August).val.trim(),
-//September: ($September).val.trim(),
-//October: ($October).val.trim(),
-//November: ($November).val.trim(),
-//December: ($December).val.trim(),
-//Truck: ($Truck).val.trim(),
-//etc etc it depends on the materials y'all asked of them and the occupation y'all ask of them]
+var volunteer= [
+first_name: $("#first_name").val.trim(),
+last_name: $("#last_name").val.trim(), 
+email: $("#email").val.trim(), 
+password: $("#password").val.trim(),
+phoneNumber: $("#phoneNumber").val.trim(),
+address: $("#address").val.trim(), 
+city: $("#city").val.trim(),
+state: $("#state").val.trim(),
+zip: $("#zip").val.trim(),
+emerg: $("#emerg").val.trim(),
+relationship: $("#relationship").val.trim(),
+ePhone: $("#ePhone").val.trim(),
+travel: $("#travel").val.trim(),
+jan: $("#jan").val.trim(),
+feb: $("#feb").val.trim(),
+march: $("#march").val.trim();
+april: $("#april").val.trim();
+may: $("#may").val.trim();
+june: $("#june").val.trim(),
+july: $("#july").val.trim(),
+aug: $("#aug").val.trim(),
+sept: $("#sept").val.trim(),
+oct: $("#oct").val.trim(),
+nov: $("#nov").val.trim(),
+dec: $("#dec").val.trim(),
+chainsaw: $("#chainsaw").val.trim(),
+roapRescueEquip: $("#roapRescueEquip").val.trim(),
+comPumperTruck: $("#comPumperTruck").val.trim(),
+backhoe: $("#backhoe").vol.trim(),
+veteran: $("#veteran").vol.trim(),
+ert: $("#ert").val.trim(),
+nurse: $("#nurse").val.trim(),
+doc: $("#doc").val.trim(),
+veterinarian: $("#veterinarian").val.trim(),
+vetTech: $("#vetTech").val.trim(),
+animTAB: $("#animTAB").val.trim(),
+comDriver: $("#trim").val.trim(),
+formTextEquip: $("#formTextEquip").val.trim(),
+formTextSkill: $("#formTextSkill").val.trim(),
+modalNote: $("#modalNote").val.trim(),
+]
+});
+
+$.post("/api/api-routes", volunteer);
