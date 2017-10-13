@@ -6,6 +6,32 @@
  * Made By MaterializeCSS.com
  */
 
+@media only screen and (max-width: 550px) {
+    #navText {
+        display:none;
+    }
+
+    #navbtn {
+      margin-top: 0px;
+      font-size: 20px;
+      background-color: #133C7D;
+      width: 300px;
+      padding-left: 0px;
+      margin-right: 110px;
+ 
+    }
+    .carousel{
+      display: none;
+    }
+    
+    #index-banner{
+      display: none;
+    }
+
+}
+
+
+
 .carousel {
     overflow: hidden;
     position: relative;
@@ -43,7 +69,6 @@
 #navbtn{
     background-color: #133C7D;
     font-size: 20px;
-    
     color:white;
     height: 50px;
   }
