@@ -32,7 +32,7 @@ module.exports = function(app) {
         // insert into our table. In this case we just we pass in an object with a text
         // and complete property (req.body)
         console.log("we're posting!");
-        console.log(db.Vol)
+        console.log(db.Vol);
 
         db.Vol.create({
                 first_name: req.body.first_name,
@@ -137,42 +137,42 @@ module.exports = function(app) {
                 res.json(err);
             });
 
-        db.ResQ.create({
-                name: req.body.name,
-                coordinate: req.body.coordinate, //converted the address to a coordinate using the mapbox API
-                email: req.body.email,
-                password: req.body.password,
-                phone: req.body.phone,
-                emergency: req.body.emergency,
-                emerphone: req.body.emerphone,
-                travel: req.body.travel
+        // db.ResQ.create({
+        //         name: req.body.name,
+        //         coordinate: req.body.coordinate, //converted the address to a coordinate using the mapbox API
+        //         email: req.body.email,
+        //         password: req.body.password,
+        //         phone: req.body.phone,
+        //         emergency: req.body.emergency,
+        //         emerphone: req.body.emerphone,
+        //         travel: req.body.travel
 
-            }).then(function(dbvre) {
-                // We have access to the new vre as an argument inside of the callback function
-                res.json(dbvre);
-            })
-            .catch(function(err) {
-                // Whenever a validation or flag fails, an error is thrown
-                // We can "catch" the error to prevent it from being "thrown", which could crash our node app
-                res.json(err);
-            });
+        //     }).then(function(dbvre) {
+        //         // We have access to the new vre as an argument inside of the callback function
+        //         res.json(dbvre);
+        //     })
+        //     .catch(function(err) {
+        //         // Whenever a validation or flag fails, an error is thrown
+        //         // We can "catch" the error to prevent it from being "thrown", which could crash our node app
+        //         res.json(err);
+        //     });
 
 
     });
 
-    function addToCoordinates(add, state, city) {
-        var address = add + " " + city + " " + state;
-        directionsURL = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + address + '.json?' +
-            'access_token=pk.eyJ1IjoiYmJtYXBib3giLCJhIjoiY2o1Njl0eXdjMGs4eTJ4dDYxd2htdG1nMyJ9.RkRe_pnUD1Tc-b8Re7SWKw';
+    // function addToCoordinates(add, state, city) {
+    //     var address = add + " " + city + " " + state;
+    //     directionsURL = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + address + '.json?' +
+    //         'access_token=pk.eyJ1IjoiYmJtYXBib3giLCJhIjoiY2o1Njl0eXdjMGs4eTJ4dDYxd2htdG1nMyJ9.RkRe_pnUD1Tc-b8Re7SWKw';
 
-        //make ajax call to mapbox geocoding api
-        $.ajax({
-            url: directionsURL,
-            method: 'GET',
-            dataType: 'json'
-        }).done(function(res) {
-            console.log(res.features[0].center);
-        });
-    }
+    //     //make ajax call to mapbox geocoding api
+    //     $.ajax({
+    //         url: directionsURL,
+    //         method: 'GET',
+    //         dataType: 'json'
+    //     }).done(function(res) {
+    //         console.log(res.features[0].center);
+    //     });
+    // }
 
 };
