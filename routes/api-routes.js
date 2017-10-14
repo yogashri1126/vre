@@ -9,6 +9,7 @@
 //assume our db= vre
 //two tables: volunteer (Vol) and rescuee (resQ)
 var db = require("../models");
+console.log(db.Vol);
 //var vol = require("../data/data.js") //we will need to make another js file containing all the information for the volunteers
 
 
@@ -17,7 +18,7 @@ var db = require("../models");
 module.exports = function(app) {
 
     // GET route for getting all of the participants
-    app.get("/api/vre", function(req, res) {
+    app.get("/api/api-routes", function(req, res) {
         // findAll returns all entries for a table when used with no options
         db.vre.findAll({}).then(function(dbvre) {
             // We have access to the vre as an argument inside of the callback function
@@ -26,10 +27,11 @@ module.exports = function(app) {
     });
 
     // POST route for saving a new vre
-    app.post("/api/Vol", function(req, res) {
+    app.post("/api/api-routes", function(req, res) {
         // create takes an argument of an object describing the item we want to
         // insert into our table. In this case we just we pass in an object with a text
         // and complete property (req.body)
+        console.log("we're posting!");
 
         db.Vol.create({
                 first_name: req.body.first_name,
@@ -126,6 +128,7 @@ module.exports = function(app) {
             }).then(function(dbvre) {
                 // We have access to the new vre as an argument inside of the callback function
                 res.json(dbvre);
+                console.log("dbvre")
             })
             .catch(function(err) {
                 // Whenever a validation or flag fails, an error is thrown
