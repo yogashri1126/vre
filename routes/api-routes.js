@@ -32,6 +32,7 @@ module.exports = function(app) {
         // insert into our table. In this case we just we pass in an object with a text
         // and complete property (req.body)
         console.log("we're posting!");
+        console.log(db.Vol)
 
         db.Vol.create({
                 first_name: req.body.first_name,
@@ -110,7 +111,7 @@ module.exports = function(app) {
                 dec: req.body.dec,
                 chainsaw: req.body.chainsaw,
                 roapRescueEquip: req.body.roapRescueEquip,
-                comPumperTruck: comPumperTruck,
+                comPumperTruck: req.body.comPumperTruck,
                 backhoe: req.body.backhoe,
                 veteran: req.body.veteran,
                 ert: req.body.ert,
