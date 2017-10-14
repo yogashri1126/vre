@@ -37,7 +37,7 @@ module.exports = function(app) {
         db.Vol.create({
                 first_name: req.body.first_name,
                 last_name: req.body.last_name,
-                email: req.body_email,
+                email: req.body.email,
                 password: req.body.password,
                 phoneNumber: req.body.phoneNumber,
                 address: req.body.address,

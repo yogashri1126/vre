@@ -19,6 +19,57 @@ module.exports = function(sequelize, DataTypes) {
                     len: [1, 140]
                 }
 
+            },
+
+            email: {
+                type: DataTypes.STRING,
+                // defaultValue is a flag that defaults a new todos complete value to false if
+                // it isn't supplied one
+                allowNull: false
+                    // validate: {
+                    //     len: [1, 140]
+            },
+
+            password: {
+                type: DataTypes.STRING,
+                // defaultValue is a flag that defaults a new todos complete value to false if
+                // it isn't supplied one
+                allowNull: false
+                    // validate: {
+                    //     len: [1, 140]
+            },
+
+            phoneNumber: {
+                type: DataTypes.STRING,
+                // defaultValue is a flag that defaults a new todos complete value to false if
+                // it isn't supplied one
+                allowNull: false
+                    // validate: {
+                    //     len: [1, 140]
+                    // }
+
+            },
+
+            address: {
+                type: DataTypes.STRING,
+                // defaultValue is a flag that defaults a new todos complete value to false if
+                // it isn't supplied one
+                allowNull: false
+                    // validate: {
+                    //     len: [1, 140]
+                    // }
+
+            },
+
+            city: {
+                type: DataTypes.STRING,
+                // defaultValue is a flag that defaults a new todos complete value to false if
+                // it isn't supplied one
+                allowNull: false
+                    // validate: {
+                    //     len: [1, 140]
+                    // }
+
             }
 
         },
