@@ -177,7 +177,7 @@ $(document).ready(function() {
             Virginia: $("#Virginia").val.trim(),
             Washington: $("#Washington").val.trim(),
             West_Virginia: $("#West Virginia").val.trim(),
-            Weisconsin: $("#Weisconsin").val.trim(),
+            Wisconsin: $("#Wisconsin").val.trim(),
             Wyoming: $("#Wyoming").val.trim()
         }
 
