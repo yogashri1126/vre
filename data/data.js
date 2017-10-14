@@ -2,6 +2,16 @@
 
 //put jQuery here
 //make ajax request $post here
+//var $= require("jQuery");
+
+require("jsdom").env("", function(err, window) {
+    if (err) {
+        console.error(err);
+        return;
+    }
+ 
+    var $ = require("jquery")(window);
+});
 
 $("#addVol").on('click', function(event) {
     event.preventDefault();
@@ -94,6 +104,7 @@ $("#addVol").on('click', function(event) {
         comDriver: $("#trim").val.trim(),
         modalNote: $("#modalNote").val.trim()
     }
+    $.post("/api/api-routes", volunteer);
 });
 
 $('#signIn').on('click', function(event) {
@@ -169,7 +180,7 @@ $('#addResuceMe').on('click', function(event) {
 
 $.post("/api/api-routes", SignIn);
 
-$.post("/api/api-routes", volunteer);
+
 
 $.post("/api/api-routes", rescuee);
 
