@@ -17,7 +17,7 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: false
     }
   });
-  return ResQ;
+  return Vol;
 
     var ResQ = sequelize.define("ResQ", {
 

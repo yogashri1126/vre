@@ -9,7 +9,7 @@
 //assume our db= vre
 //two tables: volunteer (Vol) and rescuee (resQ)
 var db = require("../models");
-var vol = require("../info") //we will need to make another js file containing all the information for the volunteers
+var vol = require("../data/data.js") //we will need to make another js file containing all the information for the volunteers
 
 
 // Routes
@@ -71,9 +71,9 @@ module.exports = function(app) {
                     New_Hampshire: req.body.New_Hampshire,
                     New_Jersey: req.body.New_Jersey,
                     New_Mexico: req.body.New_Mexico,
-                    New_York: req.body.New York,
-                    North_Carolina: req.body.North Carolina,
-                    North_Dakota: req.body.North Dakota,
+                    New_York: req.body.New_York,
+                    North_Carolina: req.body.North_Carolina,
+                    North_Dakota: req.body.North_Dakota,
                     Ohio: req.body.Ohio,
                     Oklahoma: req.body.Oklahoma,
                     Oregon: req.body.Oregon,
@@ -88,7 +88,7 @@ module.exports = function(app) {
                     Virginia: req.body.Virginia,
                     Washington: req.body.Washington,
                     West_Virginia: req.body.West_Virginia,
-                    Weisconsin:: req.body.Weisconsin,
+                    Wisconsin: req.body.Wisconsin,
                     Wyoming: req.body.Wyoming,
                     zip: req.body.zip,
                     emerg: req.body.emerg,
@@ -97,9 +97,9 @@ module.exports = function(app) {
                     travel: req.body.travel,
                     jan: req.body.jan,
                     feb: req.body.feb,
-                    march: req.body.march;
-                    april: req.body.april;
-                    may: req.body.may;
+                    march: req.body.march,
+                    april: req.body.april,
+                    may: req.body.may,
                     june: req.body.june,
                     july: req.body.july,
                     aug: req.body.aug,
@@ -121,7 +121,7 @@ module.exports = function(app) {
                     comDriver: req.body.comDriver,
                     formTextEquip: req.body.formTextEquip,
                     formTextSkill: req.body.formTextSkill,
-                    ,
+                    
                     modalNote: req.body.modalNote
 
                 }).then(function(dbvre) {
@@ -138,12 +138,12 @@ module.exports = function(app) {
         if (resq) {
             db.ResQ.create({
                     name: req.body.name,
-                    coordinate: req.body.coordinate //converted the address to a coordinate using the mapbox API
-                    email: req.body.email
-                    password: req.body.password
-                    phone: req.body.phone
-                    emergency: req.body.emergency
-                    emerphone: req.body.emerphone
+                    coordinate: req.body.coordinate, //converted the address to a coordinate using the mapbox API
+                    email: req.body.email,
+                    password: req.body.password,
+                    phone: req.body.phone,
+                    emergency: req.body.emergency,
+                    emerphone: req.body.emerphone,
                     travel: req.body.travel
 
                 }).then(function(dbvre) {
