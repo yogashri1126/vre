@@ -759,7 +759,7 @@ module.exports = function(sequelize, DataTypes) {
             freezeTableName: true
         });
 
-    return Vol;
+   // return Vol;
 
     var ResQ = sequelize.define("ResQ", {
 
@@ -849,5 +849,6 @@ module.exports = function(sequelize, DataTypes) {
         {
             freezeTableName: true
         });
+    return Vol;
     return ResQ;
 };
