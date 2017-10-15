@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var vol = sequelize.define("Vol", {
+    var Vol = sequelize.define("Vol", {
             first_name: {
                 type: DataTypes.STRING,
                 // AllowNull is a flag that restricts a todo from being entered if it doesn't
@@ -493,14 +493,14 @@ module.exports = function(sequelize, DataTypes) {
                     //     len: [1, 140]
             },
 
-            coord: {
-                type: DataTypes.DOUBLE,
-                // defaultValue is a flag that defaults a new todos complete value to false if
-                // it isn't supplied one
-                allowNull: false
-                    // validate: {
-                    //     len: [1, 140]
-            },
+            // coord: {
+            //     type: DataTypes.DOUBLE,
+            //     // defaultValue is a flag that defaults a new todos complete value to false if
+            //     // it isn't supplied one
+            //     allowNull: false
+            //         // validate: {
+            //         //     len: [1, 140]
+            // },
             emerg: {
                 type: DataTypes.STRING,
                 // defaultValue is a flag that defaults a new todos complete value to false if
@@ -743,6 +743,6 @@ module.exports = function(sequelize, DataTypes) {
             freezeTableName: true
         });
 
-   return vol;
+   return Vol;
 
 };
