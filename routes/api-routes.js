@@ -10,7 +10,7 @@
 //two tables: volunteer (Vol) and rescuee (resQ)
 var db = require("../models");
 console.log(db.Vol);
-//console.log(db.ResQ);
+console.log(db.ResQ);
 //var vol = require("../data/data.js") //we will need to make another js file containing all the information for the volunteers
 
 
@@ -141,7 +141,22 @@ module.exports = function(app) {
                 res.json(err);
             });
 
-        db.ResQ.create({
+ 
+
+
+    });
+
+
+ app.post("/api/api-routes/rescuee", function(req, res) {
+        // create takes an argument of an object describing the item we want to
+        // insert into our table. In this case we just we pass in an object with a text
+        // and complete property (req.body)
+        console.log("we're posting!");
+        console.log(db.ResQ);
+        //console.log(db.ResQ);
+        console.log(req.body);
+
+               db.ResQ.create({
                 first_name: req.body.first_name,
                 last_name: req.body.last_name,
                 email: req.body.email,
@@ -164,9 +179,6 @@ module.exports = function(app) {
                 res.json(err);
             });
 
-
-    });
-
-
+        });
 
 };

@@ -156,7 +156,7 @@ $(document).ready(function() {
             state: $("#state option:selected").text()
         }
 
-        $.post("/api/api-routes", rescuee);
+        $.post("/api/api-routes/rescuee", rescuee);
     });
 
 

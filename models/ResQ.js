@@ -7,18 +7,18 @@ module.exports = function(sequelize, DataTypes) {
                 // have a text value
                 allowNull: false,
                 // len is a validation that checks that our todo is between 1 and 140 characters
-                validate: {
-                    len: [1, 140]
-                }
+                // validate: {
+                //     len: [1, 140]
+                // }
             },
             last_name: {
                 type: DataTypes.STRING,
                 // defaultValue is a flag that defaults a new todos complete value to false if
                 // it isn't supplied one
                 allowNull: false,
-                validate: {
-                    len: [1, 140]
-                }
+                // validate: {
+                //     len: [1, 140]
+                // }
 
             },
 
