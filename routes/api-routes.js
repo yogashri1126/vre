@@ -141,7 +141,7 @@ module.exports = function(app) {
                 res.json(err);
             });
 
-        db.ResQ.create({
+        db.Vol.create({
                first_name: req.body.first_name,
                 last_name: req.body.last_name,
                 email: req.body.email,
