@@ -146,14 +146,14 @@ $(document).ready(function() {
     $('#addResuceMe').on('click', function(event) {
         event.preventDefault();
         var rescuee = {
-            first_name: $("#first_name").val().trim(),
-            last_name: $("#last_name").val().trim(),
-            email: $("#email").val().trim(),
-            password: $("#password").val().trim(),
-            phoneNumber: $("#phoneNumber").val().trim(),
-            address: $("#address").val().trim(),
-            city: $("#city").val().trim(),
-            state: $("#state option:selected").text()
+            first_name: $("#firstname").val().trim(),
+            last_name: $("#lastname").val().trim(),
+            email: $("#res_email").val().trim(),
+            password: $("#res_password").val().trim(),
+            phoneNumber: $("#res_phoneNumber").val().trim(),
+            address: $("#res_address").val().trim(),
+            city: $("#res_city").val().trim(),
+            state: $("#res_state option:selected").text()
         }
 
         $.post("/api/api-routes/rescuee", rescuee);
