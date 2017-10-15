@@ -57,7 +57,7 @@
                           <div class="indeterminate col s8"></div>
                         </div>
                   </div>
-                    <input id="cancelMe" type="submit1" name="cancel_submit" value="Cancel" />
+                    <input id="cancelMe" type="submit1" class="modal-action modal-close" name="cancel_submit" value="Cancel" />
               </div>
             </div>
 
@@ -130,7 +130,7 @@
       
       <div class="row">
         <div class="input-field col s6">
-          <input id="email" type="email" class="validate" required>
+          <input id="email" type="text" class="validate" required>
           <label for="email">email</label>
         </div>
         <div class="input-field col s6">
@@ -407,6 +407,7 @@
 
               <div class="modal-content">
                 <h5>Sign in</h5>
+                  <form action="#">
                         <div class="row">
                           <div class="input-field col s5">
                             <input id="username" type="text" class="validate">
@@ -425,7 +426,7 @@
                         <button class="social-signin twitter">Twitter</button>
                         <button class="social-signin google">Google+</button>
                         </div>
-
+                    </form>
                        
                         </div>
                       </div>
@@ -453,6 +454,7 @@
 
               <div class="modal-content">
                 <h5>Sign up for rescue services</h5>
+                  <form>
                         <div class="row">
                           <div class="input-field col s5">
                             <input id="firstname" type="text" class="validate">
@@ -574,8 +576,8 @@
                         <button class="social-signin twitter">Log in with Twitter</button>
                         <button class="social-signin google">Log in with Google+</button>
                         </div>
-
-                       
+                        
+                       </form>
 
                         <input id="addResuceMe" type="submit" name="signup_submit" value="Sign Me Up!" />
               </div>
