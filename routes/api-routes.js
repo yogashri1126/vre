@@ -34,7 +34,7 @@ module.exports = function(app) {
         // and complete property (req.body)
         console.log("we're posting!");
         console.log(db.Vol);
-        console.log(db.ResQ);
+        //console.log(db.ResQ);
         console.log(req.body);
 
 
@@ -142,25 +142,25 @@ module.exports = function(app) {
                 res.json(err);
             });
 
-        db.ResQ.create({
-               first_name: req.body.first_name,
-                last_name: req.body.last_name,
-                email: req.body.email,
-                password: req.body.password,
-                phoneNumber: req.body.phoneNumber,
-                address: req.body.address,
-                city: req.body.city,
-                state: req.body.state
+        // db.ResQ.create({
+        //         first_name: req.body.first_name,
+        //         last_name: req.body.last_name,
+        //         email: req.body.email,
+        //         password: req.body.password,
+        //         phoneNumber: req.body.phoneNumber,
+        //         address: req.body.address,
+        //         city: req.body.city,
+        //         state: req.body.state
 
-            }).then(function(dbvre) {
-                // We have access to the new vre as an argument inside of the callback function
-                res.json(dbvre);
-            })
-            .catch(function(err) {
-                // Whenever a validation or flag fails, an error is thrown
-                // We can "catch" the error to prevent it from being "thrown", which could crash our node app
-                res.json(err);
-            });
+        //     }).then(function(dbvre) {
+        //         // We have access to the new vre as an argument inside of the callback function
+        //         res.json(dbvre);
+        //     })
+        //     .catch(function(err) {
+        //         // Whenever a validation or flag fails, an error is thrown
+        //         // We can "catch" the error to prevent it from being "thrown", which could crash our node app
+        //         res.json(err);
+        //     });
 
 
     });
