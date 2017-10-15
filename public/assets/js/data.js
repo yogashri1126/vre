@@ -121,6 +121,7 @@ $(document).ready(function() {
                 dataType: 'json'
             }).done(function(res) {
                 console.log(res.features[0].center);
+                return (res.features[0].center);
             });
         }
 

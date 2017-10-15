@@ -34,6 +34,7 @@ module.exports = function(app) {
         // and complete property (req.body)
         console.log("we're posting!");
         console.log(db.Vol);
+        console.log(db.ResQ);
         console.log(req.body);
 
 
@@ -141,7 +142,7 @@ module.exports = function(app) {
                 res.json(err);
             });
 
-        db.Vol.create({
+        db.ResQ.create({
                first_name: req.body.first_name,
                 last_name: req.body.last_name,
                 email: req.body.email,
