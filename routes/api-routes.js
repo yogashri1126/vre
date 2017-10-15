@@ -33,6 +33,8 @@ module.exports = function(app) {
         // and complete property (req.body)
         console.log("we're posting!");
         console.log(db.Vol);
+        console.log(req.body);
+
 
         db.Vol.create({
                 first_name: req.body.first_name,
@@ -110,7 +112,7 @@ module.exports = function(app) {
                 nov: req.body.nov,
                 dec: req.body.dec,
                 chainsaw: req.body.chainsaw,
-                roapRescueEquip: req.body.roapRescueEquip,
+                ropeRescueEquip: req.body.ropeRescueEquip,
                 comPumperTruck: req.body.comPumperTruck,
                 backhoe: req.body.backhoe,
                 veteran: req.body.veteran,
@@ -123,7 +125,6 @@ module.exports = function(app) {
                 comDriver: req.body.comDriver,
                 formTextEquip: req.body.formTextEquip,
                 formTextSkill: req.body.formTextSkill,
-
                 modalNote: req.body.modalNote
 
             }).then(function(dbvre) {
