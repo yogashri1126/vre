@@ -130,7 +130,7 @@ module.exports = function(app) {
 
             }).then(function(dbvre) {
                 // We have access to the new vre as an argument inside of the callback function
-                console.log(dbvre);
+                //console.log(dbvre);
                 res.json(dbvre);
 
             })
@@ -155,7 +155,16 @@ module.exports = function(app) {
                 vol.updateAttributes({
                     coord: req.body.coord
                 });
+                console.log(req.body);
             });
+    });
+
+    // retrieve all voluunteers
+    app.get("/api/api-routes/get-vols", function(req, res) {
+        db.Vol.findAll()
+        .then( vols => {
+            res.json(vols)
+        });
     });
 
 

@@ -14,7 +14,7 @@
 // });
 
 $(document).ready(function() {
-
+	var currentUser;
     $("#addVol").on('click', function(event) {
         event.preventDefault();
         var volunteer = {
@@ -163,6 +163,8 @@ $(document).ready(function() {
             state: $("#res_state option:selected").text(),
             coord: " "
         }
+        //set curren user
+        currentUser = rescuee;
 
         var posting= $.post("/api/api-routes/rescuee", rescuee);
 
@@ -179,7 +181,13 @@ $(document).ready(function() {
 
     });
 
-
+    var 
+    $("#navbtn").on("click", function(){
+    	// loop through volunteers and get necessary properties
+    	$.get("/api/api-routes/get-vols", function(res) {
+    		console.log(res);
+    	});
+    });
 
 
 });
