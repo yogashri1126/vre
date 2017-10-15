@@ -37,7 +37,6 @@ module.exports = function(app) {
         //console.log(db.ResQ);
         console.log(req.body);
 
-
         db.Vol.create({
                 first_name: req.body.first_name,
                 last_name: req.body.last_name,
@@ -116,7 +115,7 @@ module.exports = function(app) {
                 nov: req.body.nov,
                 dec: req.body.dec,
                 chainsaw: req.body.chainsaw,
-                ropeRescueEquip: req.body.ropeRescueEquip,
+                ropeRescue: req.body.ropeRescue,
                 comPumperTruck: req.body.comPumperTruck,
                 backhoe: req.body.backhoe,
                 veteran: req.body.veteran,
@@ -127,8 +126,6 @@ module.exports = function(app) {
                 vetTech: req.body.vetTech,
                 animTAB: req.body.animTAB,
                 comDriver: req.body.comDriver,
-                formTextEquip: req.body.formTextEquip,
-                formTextSkill: req.body.formTextSkill,
                 modalNote: req.body.modalNote
 
             }).then(function(dbvre) {

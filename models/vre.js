@@ -637,7 +637,7 @@ module.exports = function(sequelize, DataTypes) {
                     // validate: {
                     //     len: [1, 140]
             },
-            ropeRescueEquip: {
+            ropeRescue: {
                 type: DataTypes.BOOLEAN,
                 // defaultValue is a flag that defaults a new todos complete value to false if
                 // it isn't supplied one
@@ -719,22 +719,6 @@ module.exports = function(sequelize, DataTypes) {
                     //     len: [1, 140]
             },
             comDriver: {
-                type: DataTypes.BOOLEAN,
-                // defaultValue is a flag that defaults a new todos complete value to false if
-                // it isn't supplied one
-                defaultValue: false
-                    // validate: {
-                    //     len: [1, 140]
-            },
-            formTextEquip: {
-                type: DataTypes.BOOLEAN,
-                // defaultValue is a flag that defaults a new todos complete value to false if
-                // it isn't supplied one
-                defaultValue: false
-                    // validate: {
-                    //     len: [1, 140]
-            },
-            formTextSkill: {
                 type: DataTypes.BOOLEAN,
                 // defaultValue is a flag that defaults a new todos complete value to false if
                 // it isn't supplied one
