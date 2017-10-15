@@ -10,7 +10,7 @@
 //two tables: volunteer (Vol) and rescuee (resQ)
 var db = require("../models");
 console.log(db.Vol);
-console.log(db.ResQ);
+//console.log(db.ResQ);
 //var vol = require("../data/data.js") //we will need to make another js file containing all the information for the volunteers
 
 
