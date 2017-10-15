@@ -10,6 +10,7 @@
 //two tables: volunteer (Vol) and rescuee (resQ)
 var db = require("../models");
 console.log(db.Vol);
+console.log(db.ResQ);
 //var vol = require("../data/data.js") //we will need to make another js file containing all the information for the volunteers
 
 
@@ -45,6 +46,7 @@ module.exports = function(app) {
                 address: req.body.address,
                 city: req.body.city,
                 state: req.body.state,
+                //coord: req.body.coord,
                 // Alabama: req.body.Alabama,
                 // Alaska: req.body.Alaska,
                 // Arizona: req.body.Arizona,
@@ -139,42 +141,29 @@ module.exports = function(app) {
                 res.json(err);
             });
 
-        // db.ResQ.create({
-        //         name: req.body.name,
-        //         coordinate: req.body.coordinate, //converted the address to a coordinate using the mapbox API
-        //         email: req.body.email,
-        //         password: req.body.password,
-        //         phone: req.body.phone,
-        //         emergency: req.body.emergency,
-        //         emerphone: req.body.emerphone,
-        //         travel: req.body.travel
+        db.ResQ.create({
+               first_name: req.body.first_name,
+                last_name: req.body.last_name,
+                email: req.body.email,
+                password: req.body.password,
+                phoneNumber: req.body.phoneNumber,
+                address: req.body.address,
+                city: req.body.city,
+                state: req.body.state
 
-        //     }).then(function(dbvre) {
-        //         // We have access to the new vre as an argument inside of the callback function
-        //         res.json(dbvre);
-        //     })
-        //     .catch(function(err) {
-        //         // Whenever a validation or flag fails, an error is thrown
-        //         // We can "catch" the error to prevent it from being "thrown", which could crash our node app
-        //         res.json(err);
-        //     });
+            }).then(function(dbvre) {
+                // We have access to the new vre as an argument inside of the callback function
+                res.json(dbvre);
+            })
+            .catch(function(err) {
+                // Whenever a validation or flag fails, an error is thrown
+                // We can "catch" the error to prevent it from being "thrown", which could crash our node app
+                res.json(err);
+            });
 
 
     });
 
-    // function addToCoordinates(add, state, city) {
-    //     var address = add + " " + city + " " + state;
-    //     directionsURL = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + address + '.json?' +
-    //         'access_token=pk.eyJ1IjoiYmJtYXBib3giLCJhIjoiY2o1Njl0eXdjMGs4eTJ4dDYxd2htdG1nMyJ9.RkRe_pnUD1Tc-b8Re7SWKw';
 
-    //     //make ajax call to mapbox geocoding api
-    //     $.ajax({
-    //         url: directionsURL,
-    //         method: 'GET',
-    //         dataType: 'json'
-    //     }).done(function(res) {
-    //         console.log(res.features[0].center);
-    //     });
-    // }
 
 };

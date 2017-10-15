@@ -77,6 +77,7 @@ $(document).ready(function() {
             // Wisconsin: $("#Wisconsin").val().trim(),
             // Wyoming: $("#Wyoming").val().trim(),
             zip: $("#zip").val().trim(),
+            //coord: addToCoordinates($("#address").val().trim(), $("#state option:selected").text(), $("#city").val().trim()),
             emerg: $("#emerg").val().trim(),
             relationship: $("#relationship").val().trim(),
             ePhone: $("#ePhone").val().trim(),
@@ -107,8 +108,28 @@ $(document).ready(function() {
             comDriver: $("#drive").is(':checked'),
             modalNote: $("#modalNote").is(':checked')
         };
+
+        function addToCoordinates(address, state, city) {
+            var add = address + " " + city + " " + state;
+            directionsURL = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + add + '.json?' +
+                'access_token=pk.eyJ1IjoiYmJtYXBib3giLCJhIjoiY2o1Njl0eXdjMGs4eTJ4dDYxd2htdG1nMyJ9.RkRe_pnUD1Tc-b8Re7SWKw';
+
+            //make ajax call to mapbox geocoding api
+            $.ajax({
+                url: directionsURL,
+                method: 'GET',
+                dataType: 'json'
+            }).done(function(res) {
+                console.log(res.features[0].center);
+            });
+        }
+
         console.log("YOU VOLUNTEERED");
+        console.log(volunteer.first_name);
+        console.log(volunteer.coord);
+
         $.post("/api/api-routes", volunteer);
+
     });
 
     $('#signIn').on('click', function(event) {
@@ -131,59 +152,15 @@ $(document).ready(function() {
             phoneNumber: $("#phoneNumber").val().trim(),
             address: $("#address").val().trim(),
             city: $("#city").val().trim(),
-            Alabama: $("#Alabama").val().trim(),
-            Alaska: $("#Alaska").val().trim(),
-            Arizona: $("#Arizona").val().trim(),
-            Arkansas: $("#Arkansas").val().trim(),
-            California: $("#California").val().trim(),
-            Colorado: $("#Colorado").val().trim(),
-            Connecticut: $("#Connecticut").val().trim(),
-            Delaware: $("#Delaware").val().trim(),
-            Florida: $("#Florida").val().trim(),
-            Georgia: $("#Georgia").val().trim(),
-            Hawaii: $("#Hawaii").val().trim(),
-            Idaho: $("#Idaho").val().trim(),
-            Illinois: $("#Illinois").val().trim(),
-            Indiana: $("#Indiana").val().trim(),
-            Iowa: $("#Iowa").val().trim(),
-            Kansas: $("#Kansas").val().trim(),
-            Kentucky: $("#Kentucky").val().trim(),
-            Louisiana: $("#Louisiana").val().trim(),
-            Maine: $("#Maine").val().trim(),
-            Maryland: $("#Maryland").val().trim(),
-            Massachusetts: $("#Massachusetts").val().trim(),
-            Michigan: $("#Michigan").val().trim(),
-            Minnesota: $("#Minnesota").val().trim(),
-            Mississippi: $("#Mississippi").val().trim(),
-            Missouri: $("#Missouri").val().trim(),
-            Montana: $("#Montana").val().trim(),
-            Nebraska: $("#Nebraska").val().trim(),
-            Nevada: $("#Nevada").val().trim(),
-            New_Hampshire: $("#New Hampshire").val().trim(),
-            New_Jersey: $("#New Jersey").val().trim(),
-            New_Mexico: $("#New Mexico").val().trim(),
-            New_York: $("#New York").val().trim(),
-            North_Carolina: $("#North Carolina").val().trim(),
-            North_Dakota: $("#North Dakota").val().trim(),
-            Ohio: $("#Ohio").val().trim(),
-            Oklahoma: $("#Oklahoma").val().trim(),
-            Oregon: $("#Oregon").val().trim(),
-            Pennsylvania: $("#Pennsylvania").val().trim(),
-            Rhode_Island: $("#Rhode Island").val().trim(),
-            South_Carolina: $("#South Carolina").val().trim(),
-            South_Dakota: $("#South Dakota").val().trim(),
-            Tennessee: $("#Tennessee").val().trim(),
-            Texas: $("#Texas").val().trim(),
-            Utah: $("#Utah").val().trim(),
-            Vermont: $("#Vermont").val().trim(),
-            Virginia: $("#Virginia").val().trim(),
-            Washington: $("#Washington").val().trim(),
-            West_Virginia: $("#West Virginia").val().trim(),
-            Wisconsin: $("#Wisconsin").val().trim(),
-            Wyoming: $("#Wyoming").val().trim()
+            state: $("#state option:selected").text()
         }
 
         $.post("/api/api-routes", rescuee);
     });
 
+
+
+
 });
+
+// addToCoordinates("6814 Ashland Terrace", "Texas", "Rosenberg")
