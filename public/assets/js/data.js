@@ -109,22 +109,6 @@ $(document).ready(function() {
             modalNote: $("#modalNote").is(':checked')
         };
 
-        function addToCoordinates(address, state, city) {
-            var add = address + " " + city + " " + state;
-            directionsURL = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + add + '.json?' +
-                'access_token=pk.eyJ1IjoiYmJtYXBib3giLCJhIjoiY2o1Njl0eXdjMGs4eTJ4dDYxd2htdG1nMyJ9.RkRe_pnUD1Tc-b8Re7SWKw';
-
-            //make ajax call to mapbox geocoding api
-            $.ajax({
-                url: directionsURL,
-                method: 'GET',
-                dataType: 'json'
-            }).done(function(res) {
-                console.log(res.features[0].center);
-                return (res.features[0].center);
-            });
-        }
-
         console.log("YOU VOLUNTEERED");
         console.log(volunteer.first_name);
         console.log(volunteer.coord);
@@ -164,4 +148,20 @@ $(document).ready(function() {
 
 });
 
-// addToCoordinates("6814 Ashland Terrace", "Texas", "Rosenberg")
+ addToCoordinates("6814 Ashland Terrace", "Texas", "Rosenberg")
+
+         function addToCoordinates(address, state, city) {
+            var add = address + " " + city + " " + state;
+            directionsURL = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + add + '.json?' +
+                'access_token=pk.eyJ1IjoiYmJtYXBib3giLCJhIjoiY2o1Njl0eXdjMGs4eTJ4dDYxd2htdG1nMyJ9.RkRe_pnUD1Tc-b8Re7SWKw';
+
+            //make ajax call to mapbox geocoding api
+            $.ajax({
+                url: directionsURL,
+                method: 'GET',
+                dataType: 'json'
+            }).done(function(res) {
+                console.log(res.features[0].center);
+                return (res.features[0].center);
+            });
+        }
