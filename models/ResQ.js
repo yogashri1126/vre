@@ -81,6 +81,14 @@ module.exports = function(sequelize, DataTypes) {
                 allowNull: false
                     // validate: {
                     //     len: [1, 140]
+            },
+            coord: {
+                type: DataTypes.STRING,
+                // defaultValue is a flag that defaults a new todos complete value to false if
+                // it isn't supplied one
+                allowNull: true
+                    // validate: {
+                    //     len: [1, 140]
             }
         },
 

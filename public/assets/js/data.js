@@ -114,26 +114,26 @@ $(document).ready(function() {
         console.log(volunteer.coord);
 
         var posting = $.post("/api/api-routes", volunteer);
-        posting.then( function() {
-        	addToCoordinates(volunteer.address);
-        	volunteer.coord = tempcoord;
-        	volunteer.coord = JSON.stringify(volunteer.coord);
-        	console.log(volunteer.coord);
-        })
-        .then(function () {
-        	$.post("/api/api-routes/vol-coords", volunteer);
-        });
-       
-      //   .then(function(){
-		    // // get the volunteer's address and change it to coordinates
-		    // addToCoordinates(volunteer.address);
-		    // // change colunteer coord to string so we can store it in the database
-		    // volunteer.coord = JSON.stringify(volunteer.coord);
-		    // console.log(volunteer.coord);
-      //   }).then(function(){
-      //   	 // make a post to api-routes
-      //  		 $.post("/api/api-routes/vol-coords", {name: volunteer.first_name , coord:volunteer.coord});
-      //   });
+        posting.then(function() {
+                addToCoordinates(volunteer.address);
+                volunteer.coord = tempcoord;
+                volunteer.coord = JSON.stringify(volunteer.coord);
+                console.log(volunteer.coord);
+            })
+            .then(function() {
+                $.post("/api/api-routes/vol-coords", volunteer);
+            });
+
+        //   .then(function(){
+        // // get the volunteer's address and change it to coordinates
+        // addToCoordinates(volunteer.address);
+        // // change colunteer coord to string so we can store it in the database
+        // volunteer.coord = JSON.stringify(volunteer.coord);
+        // console.log(volunteer.coord);
+        //   }).then(function(){
+        //   	 // make a post to api-routes
+        //  		 $.post("/api/api-routes/vol-coords", {name: volunteer.first_name , coord:volunteer.coord});
+        //   });
 
 
 
@@ -160,10 +160,21 @@ $(document).ready(function() {
             phoneNumber: $("#res_phoneNumber").val().trim(),
             address: $("#res_address").val().trim(),
             city: $("#res_city").val().trim(),
-            state: $("#res_state option:selected").text()
+            state: $("#res_state option:selected").text(),
+            coord: " "
         }
 
-        $.post("/api/api-routes/rescuee", rescuee);
+        var posting= $.post("/api/api-routes/rescuee", rescuee);
+
+        posting.then(function() {
+                addToCoordinates(rescuee.address);
+                rescuee.coord = tempcoord;
+                rescuee.coord = JSON.stringify(rescuee.coord);
+                console.log(rescuee.coord);
+            })
+            .then(function() {
+                $.post("/api/api-routes/res-coords", rescuee);
+            });
 
 
     });
@@ -173,22 +184,22 @@ $(document).ready(function() {
 
 });
 var tempcoord;
- addToCoordinates("6814 Ashland Terrace", "Texas", "Rosenberg")
+addToCoordinates("6814 Ashland Terrace", "Texas", "Rosenberg")
 
-         function addToCoordinates(address) {
-            var add = address;
-            directionsURL = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + add + '.json?' +
-                'access_token=pk.eyJ1IjoiYmJtYXBib3giLCJhIjoiY2o1Njl0eXdjMGs4eTJ4dDYxd2htdG1nMyJ9.RkRe_pnUD1Tc-b8Re7SWKw';
+function addToCoordinates(address) {
+    var add = address;
+    directionsURL = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + add + '.json?' +
+        'access_token=pk.eyJ1IjoiYmJtYXBib3giLCJhIjoiY2o1Njl0eXdjMGs4eTJ4dDYxd2htdG1nMyJ9.RkRe_pnUD1Tc-b8Re7SWKw';
 
-            //make ajax call to mapbox geocoding api
-            $.ajax({
-                url: directionsURL,
-                method: 'GET',
-                dataType: 'json'
-            }).done(function(res) {
-                console.log(res.features[0].center);
-                tempcoord = (res.features[0].center);
-                // volunteer.coord= res.features[0].center;
-                //console.log(volunteer.coord)
-            });
-        }
+    //make ajax call to mapbox geocoding api
+    $.ajax({
+        url: directionsURL,
+        method: 'GET',
+        dataType: 'json'
+    }).done(function(res) {
+        console.log(res.features[0].center);
+        tempcoord = (res.features[0].center);
+        // volunteer.coord= res.features[0].center;
+        //console.log(volunteer.coord)
+    });
+}

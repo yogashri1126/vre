@@ -193,4 +193,15 @@ module.exports = function(app) {
 
     });
 
+        app.post("/api/api-routes/res-coords", function(req, res) {
+        db.ResQ.findOne({
+                first_name: req.body.first_name
+            })
+            .then(vol => {
+                vol.updateAttributes({
+                    coord: req.body.coord
+                });
+            });
+    });
+
 };
