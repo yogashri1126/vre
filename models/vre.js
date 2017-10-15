@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Vol = sequelize.define("Vol", {
+    var vol = sequelize.define("Vol", {
             first_name: {
                 type: DataTypes.STRING,
                 // AllowNull is a flag that restricts a todo from being entered if it doesn't
@@ -743,6 +743,6 @@ module.exports = function(sequelize, DataTypes) {
             freezeTableName: true
         });
 
-   return Vol;
+   return vol;
 
 };
