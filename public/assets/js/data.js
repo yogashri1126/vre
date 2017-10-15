@@ -77,7 +77,7 @@ $(document).ready(function() {
             // Wisconsin: $("#Wisconsin").val().trim(),
             // Wyoming: $("#Wyoming").val().trim(),
             zip: $("#zip").val().trim(),
-            //coord: addToCoordinates($("#address").val().trim(), $("#state option:selected").text(), $("#city").val().trim()),
+            coord: '',
             emerg: $("#emerg").val().trim(),
             relationship: $("#relationship").val().trim(),
             ePhone: $("#ePhone").val().trim(),
@@ -113,7 +113,30 @@ $(document).ready(function() {
         console.log(volunteer.first_name);
         console.log(volunteer.coord);
 
-        $.post("/api/api-routes", volunteer);
+        var posting = $.post("/api/api-routes", volunteer);
+        posting.then( function() {
+        	addToCoordinates(volunteer.address);
+        	volunteer.coord = tempcoord;
+        	volunteer.coord = JSON.stringify(volunteer.coord);
+        	console.log(volunteer.coord);
+        })
+        .then(function () {
+        	$.post("/api/api-routes/vol-coords", volunteer);
+        });
+       
+      //   .then(function(){
+		    // // get the volunteer's address and change it to coordinates
+		    // addToCoordinates(volunteer.address);
+		    // // change colunteer coord to string so we can store it in the database
+		    // volunteer.coord = JSON.stringify(volunteer.coord);
+		    // console.log(volunteer.coord);
+      //   }).then(function(){
+      //   	 // make a post to api-routes
+      //  		 $.post("/api/api-routes/vol-coords", {name: volunteer.first_name , coord:volunteer.coord});
+      //   });
+
+
+
 
     });
 
@@ -141,17 +164,19 @@ $(document).ready(function() {
         }
 
         $.post("/api/api-routes/rescuee", rescuee);
+
+
     });
 
 
 
 
 });
-
+var tempcoord;
  addToCoordinates("6814 Ashland Terrace", "Texas", "Rosenberg")
 
-         function addToCoordinates(address, state, city) {
-            var add = address + " " + city + " " + state;
+         function addToCoordinates(address) {
+            var add = address;
             directionsURL = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + add + '.json?' +
                 'access_token=pk.eyJ1IjoiYmJtYXBib3giLCJhIjoiY2o1Njl0eXdjMGs4eTJ4dDYxd2htdG1nMyJ9.RkRe_pnUD1Tc-b8Re7SWKw';
 
@@ -162,6 +187,8 @@ $(document).ready(function() {
                 dataType: 'json'
             }).done(function(res) {
                 console.log(res.features[0].center);
-                return (res.features[0].center);
+                tempcoord = (res.features[0].center);
+                // volunteer.coord= res.features[0].center;
+                //console.log(volunteer.coord)
             });
         }

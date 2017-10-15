@@ -46,7 +46,7 @@ module.exports = function(app) {
                 address: req.body.address,
                 city: req.body.city,
                 state: req.body.state,
-                //coord: req.body.coord,
+                coord: req.body.coord,
                 // Alabama: req.body.Alabama,
                 // Alaska: req.body.Alaska,
                 // Arizona: req.body.Arizona,
@@ -132,7 +132,7 @@ module.exports = function(app) {
                 // We have access to the new vre as an argument inside of the callback function
                 console.log(dbvre);
                 res.json(dbvre);
-                
+
             })
             .catch(function(err) {
                 console.log(err);
@@ -141,13 +141,25 @@ module.exports = function(app) {
                 res.json(err);
             });
 
- 
+
 
 
     });
 
+    // route to update the volunteer database with the coordinates
+    app.post("/api/api-routes/vol-coords", function(req, res) {
+        db.Vol.findOne({
+                first_name: req.body.first_name
+            })
+            .then(vol => {
+                vol.updateAttributes({
+                    coord: req.body.coord
+                });
+            });
+    });
 
- app.post("/api/api-routes/rescuee", function(req, res) {
+
+    app.post("/api/api-routes/rescuee", function(req, res) {
         // create takes an argument of an object describing the item we want to
         // insert into our table. In this case we just we pass in an object with a text
         // and complete property (req.body)
@@ -156,7 +168,7 @@ module.exports = function(app) {
         //console.log(db.ResQ);
         console.log(req.body);
 
-               db.ResQ.create({
+        db.ResQ.create({
                 first_name: req.body.first_name,
                 last_name: req.body.last_name,
                 email: req.body.email,
@@ -170,7 +182,7 @@ module.exports = function(app) {
                 // We have access to the new vre as an argument inside of the callback function
                 console.log(dbvre);
                 res.json(dbvre);
-                
+
             })
             .catch(function(err) {
                 console.log(err);
@@ -179,6 +191,6 @@ module.exports = function(app) {
                 res.json(err);
             });
 
-        });
+    });
 
 };
