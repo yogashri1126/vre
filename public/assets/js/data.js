@@ -181,7 +181,6 @@ $(document).ready(function() {
 
     });
 
-    var 
     $("#navbtn").on("click", function(){
     	// loop through volunteers and get necessary properties
     	$.get("/api/api-routes/get-vols", function(res) {
