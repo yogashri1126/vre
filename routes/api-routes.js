@@ -46,7 +46,7 @@ module.exports = function(app) {
                 address: req.body.address,
                 city: req.body.city,
                 state: req.body.state,
-                coord: req.body.coord,
+                // coord: req.body.coord,
                 // Alabama: req.body.Alabama,
                 // Alaska: req.body.Alaska,
                 // Arizona: req.body.Arizona,

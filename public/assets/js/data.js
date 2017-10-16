@@ -12,9 +12,13 @@
 
 //     var $ = require("jQuery")(window);
 // });
-
+var currentUser;
+var selectedVol;
 $(document).ready(function() {
-	var currentUser;
+ //==========================================================================================
+
+ //=========================================================================================
+
     $("#addVol").on('click', function(event) {
         event.preventDefault();
         var volunteer = {
@@ -77,7 +81,7 @@ $(document).ready(function() {
             // Wisconsin: $("#Wisconsin").val().trim(),
             // Wyoming: $("#Wyoming").val().trim(),
             zip: $("#zip").val().trim(),
-            coord: '',
+            // coord: '',
             emerg: $("#emerg").val().trim(),
             relationship: $("#relationship").val().trim(),
             ePhone: $("#ePhone").val().trim(),
@@ -111,32 +115,20 @@ $(document).ready(function() {
 
         console.log("YOU VOLUNTEERED");
         console.log(volunteer.first_name);
-        console.log(volunteer.coord);
+        //console.log(volunteer.coord);
 
-        var posting = $.post("/api/api-routes", volunteer);
-        posting.then(function() {
-                addToCoordinates(volunteer.address);
-                volunteer.coord = tempcoord;
-                volunteer.coord = JSON.stringify(volunteer.coord);
-                console.log(volunteer.coord);
-            })
-            .then(function() {
-                $.post("/api/api-routes/vol-coords", volunteer);
-            });
-
-        //   .then(function(){
-        // // get the volunteer's address and change it to coordinates
-        // addToCoordinates(volunteer.address);
-        // // change colunteer coord to string so we can store it in the database
-        // volunteer.coord = JSON.stringify(volunteer.coord);
-        // console.log(volunteer.coord);
-        //   }).then(function(){
-        //   	 // make a post to api-routes
-        //  		 $.post("/api/api-routes/vol-coords", {name: volunteer.first_name , coord:volunteer.coord});
-        //   });
-
-
-
+				$.post("/api/api-routes", volunteer);
+        // var posting = $.post("/api/api-routes", volunteer);
+        // posting.then(function() {
+        //         //addToCoordinates(volunteer.address);
+				// 				addressToCoord(rescuee.address);
+        //         volunteer.coord = tempcoord;
+        //         volunteer.coord = JSON.stringify(volunteer.coord);
+        //         console.log(volunteer.coord);
+        //     })
+        //     .then(function() {
+        //         $.post("/api/api-routes/vol-coords", volunteer);
+        //     });
 
     });
 
@@ -161,38 +153,47 @@ $(document).ready(function() {
             address: $("#res_address").val().trim(),
             city: $("#res_city").val().trim(),
             state: $("#res_state option:selected").text(),
-            coord: " "
+            // coord: " "
         }
-        //set curren user
+        //set current user
         currentUser = rescuee;
 
-        var posting= $.post("/api/api-routes/rescuee", rescuee);
+				$.post("/api/api-routes/rescuee", rescuee);
+        // var posting= $.post("/api/api-routes/rescuee", rescuee);
+				//
+        // posting.then(function() {
+        //         // addToCoordinates(rescuee.address);
+				// 				addressToCoord(rescuee.address);
+        //         rescuee.coord = tempcoord;
+        //         rescuee.coord = JSON.stringify(rescuee.coord);
+        //         console.log(rescuee.coord);
+        //     })
+        //     .then(function() {
+        //         $.post("/api/api-routes/res-coords", rescuee);
+        //     });
 
-        posting.then(function() {
-                addToCoordinates(rescuee.address);
-                rescuee.coord = tempcoord;
-                rescuee.coord = JSON.stringify(rescuee.coord);
-                console.log(rescuee.coord);
-            })
-            .then(function() {
-                $.post("/api/api-routes/res-coords", rescuee);
-            });
-
-
-    });
-
-    var 
-    $("#navbtn").on("click", function(){
-    	// loop through volunteers and get necessary properties
-    	$.get("/api/api-routes/get-vols", function(res) {
-    		console.log(res);
-    	});
-    });
+    }); // end of on click function
 
 
 });
 var tempcoord;
-addToCoordinates("6814 Ashland Terrace", "Texas", "Rosenberg")
+
+// implemets googlemaps geocoding
+function addressToCoord(address) {
+	var add = address;
+	directionsURL = "https://maps.googleapis.com/maps/api/geocode/json?" +
+	"address="+ address + '&key=AIzaSyDu3vjrW3tNCVIuObw9ql3iqv8Iui3Seuw';
+
+	//make ajax call to mapbox geocoding api
+	$.ajax({
+			url: directionsURL,
+			method: 'GET',
+			dataType: 'json'
+	}).done(function(res) {
+			console.log(res.results[0].geometry.location);
+			tempcoord = res.results[0].geometry.location;
+	});
+}
 
 function addToCoordinates(address) {
     var add = address;
@@ -206,7 +207,7 @@ function addToCoordinates(address) {
         dataType: 'json'
     }).done(function(res) {
         console.log(res.features[0].center);
-        tempcoord = (res.features[0].center);
+        tempcoord = res.features[0].center;
         // volunteer.coord= res.features[0].center;
         //console.log(volunteer.coord)
     });

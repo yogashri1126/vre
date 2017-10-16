@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "MyNewPass",
+    "password": "bbsql2012",
     "database": "vre",
     "host": "127.0.0.1",
     "dialect": "mysql"
