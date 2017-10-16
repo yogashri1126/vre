@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "development": {
     "username": "root",
     "password": "bbsql2012",
@@ -21,3 +22,24 @@
     "dialect": "mysql"
   }
 }
+=======
+    "development": {
+        "username": "root",
+        "password": "MyNewPass",
+        "database": "vre",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    },
+    "test": {
+        "username": "root",
+        "password": "MyNewPass",
+        "database": "vre",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    },
+    "production": {
+        "use_env_variable": "JAWSDB_URL",
+        "dialect": "mysql"
+    }
+}
+>>>>>>> 147d491b465ea40a7a873842b54f2c670982fab4

@@ -36,6 +36,7 @@ module.exports = function(app) {
         console.log(db.Vol);
         //console.log(db.ResQ);
         console.log(req.body);
+        console.log(req.body.first_name)
 
         db.Vol.create({
                 first_name: req.body.first_name,
@@ -148,9 +149,9 @@ module.exports = function(app) {
 
     // route to update the volunteer database with the coordinates
     app.post("/api/api-routes/vol-coords", function(req, res) {
-        db.Vol.findOne({
-                first_name: req.body.first_name
-            })
+        db.Vol.findOne({where: {
+                email: req.body.email
+            }})
             .then(vol => {
                 vol.updateAttributes({
                     coord: req.body.coord
@@ -203,9 +204,9 @@ module.exports = function(app) {
     });
 
         app.post("/api/api-routes/res-coords", function(req, res) {
-        db.ResQ.findOne({
-                first_name: req.body.first_name
-            })
+        db.ResQ.findOne({where:{
+                email: req.body.email
+            }})
             .then(vol => {
                 vol.updateAttributes({
                     coord: req.body.coord

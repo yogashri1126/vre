@@ -172,7 +172,19 @@ $(document).ready(function() {
         //         $.post("/api/api-routes/res-coords", rescuee);
         //     });
 
+<<<<<<< HEAD
     }); // end of on click function
+=======
+
+    });
+
+    $("#navbtn").on("click", function(){
+    	// loop through volunteers and get necessary properties
+    	$.get("/api/api-routes/get-vols", function(res) {
+    		console.log(res);
+    	});
+    });
+>>>>>>> 147d491b465ea40a7a873842b54f2c670982fab4
 
 
 });
