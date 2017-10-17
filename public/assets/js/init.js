@@ -1,7 +1,7 @@
 (function($){
   $(function(){
 
-   
+
     $('.parallax').parallax();
 
   }); // end of document ready
@@ -13,17 +13,18 @@ $(document).ready(function() {
     $('#modal3').modal();
     $('#modal4').modal();
     $('#modal6').modal();
+    $('#modal_update').modal();
     $('.collapsible').collapsible();
         $('.carousel').carousel();
 
-    autoplay()   
+    autoplay()
     function autoplay() {
         $('.carousel').carousel('next');
         setTimeout(autoplay, 4500);
 }
 
 $('.carousel.carousel-slider').carousel({fullWidth: true});
-        
+
 });
 
 // $('#addVol').on('click', function()

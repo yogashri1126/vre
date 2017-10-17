@@ -8,11 +8,11 @@
 
 @media only screen and (max-width: 480px) and (min-width: 0px) {
 #leftText{
-      text-align: left !important;      
+      text-align: left !important;
     }
 #map {
-   padding-right: 150px !important;
-   width: 600px !important;
+   /*padding-right: 150px !important;
+   width: 600px !important;*/
 }
 
  #colbtn{
@@ -30,7 +30,7 @@
 
     #h5{
       display: none !important;
-  
+
     }
     #nav{
       text-align: center;
@@ -51,7 +51,7 @@
     .material-icons{
       color: red !important;
       font-size: 40px !important;
-     
+
     }
 
     .carousel{
@@ -61,11 +61,11 @@
 
 @media only screen and (max-width: 768px) and (min-width: 481px) {
 #leftText{
-      text-align: left !important;      
+      text-align: left !important;
     }
 #map {
-   padding-right: 200px !important;
-   width: 825px !important;
+  /* padding-right: 200px !important;
+   width: 825px !important;*/
 }
 
  #colbtn{
@@ -109,7 +109,7 @@
     .material-icons{
       color: red !important;
       font-size: 40px !important;
-     
+
     }
 
     .carousel{
@@ -119,7 +119,7 @@
 
 /*@media only screen and (max-width: 768px) and (min-width: 639px) {
 #leftText{
-      text-align: left !important;      
+      text-align: left !important;
     }
 #map {
    padding-right: 175px !important;
@@ -143,7 +143,7 @@
       background-color: #282b30;
       font-family: 'Roboto', sans-serif;
       color: white;
-      
+
       text-align: left !important;
     }
     #nav{
@@ -161,7 +161,7 @@
     .material-icons{
       color: red !important;
       font-size: 40px !important;
-     
+
     }
 
     .carousel{
@@ -171,12 +171,12 @@
 
 @media only screen and (max-width: 980px) and (min-width: 769px) {
 #leftText{
-      text-align: center !important;      
+      text-align: center !important;
     }
 #map {
   /* padding-right: 2000px !important;*/
-  width: 1450px !important;
-  padding-right: 0px;
+ /* width: 1450px !important;
+  padding-right: 0px;*/
 }
 
 
@@ -190,7 +190,7 @@
     margin-top: 0px;
     padding-left: 0px;
     padding-right: 0px;
-    
+
 }
 
     #h5{
@@ -205,11 +205,11 @@
 
 @media only screen and (max-width: 1024px) and (min-width: 979px) {
 #leftText{
-      text-align: left !important;      
+      text-align: left !important;
     }
 #map {
-   padding-right: 200px !important;
-   width: 1200px !important;
+  /* padding-right: 200px !important;
+   width: 1200px !important;*/
 }
 
  #colbtn{
@@ -251,7 +251,7 @@
     .material-icons{
       color: red !important;
       font-size: 40px !important;
-     
+
     }
 
     .carousel{
@@ -261,11 +261,11 @@
 
 @media only screen and (max-width: 1280px) and (min-width: 1023px) {
 #leftText{
-      text-align: left !important;      
+      text-align: left !important;
     }
 #map {
-   padding-right: 150px !important;
-   width: 1400px !important;
+  /* padding-right: 150px !important;
+   width: 1400px !important;*/
 }
 
  #colbtn{
@@ -307,7 +307,7 @@
     .material-icons{
       color: red !important;
       font-size: 40px !important;
-     
+
     }
 
     .carousel{
@@ -318,8 +318,8 @@
 @media only screen and (max-width: 1680px) and (min-width: 1079px) {
 
 #map {
-   padding-right: 225px !important;
-   width: 1580px !important;
+  /* padding-right: 225px !important;
+   width: 1580px !important;*/
   }
 }
 
@@ -329,7 +329,7 @@
       background-color: #282b30;
       font-family: 'Roboto', sans-serif;
       color: white;
-      margin-left: 50px;      
+      margin-left: 50px;
       text-align: center;
       }
 
@@ -353,7 +353,7 @@
 .icon-block .material-icons {
   font-size: 40px;
   color: red;
-  
+
 
 }
 
@@ -404,7 +404,9 @@ nav{
 
 
 #map {
-   padding-right: 500px;
+   /*padding-right: 500px;*/
+    height:400px;
+    width:100%;
 }
 
 body{
@@ -579,6 +581,11 @@ button.social-signin.google {
   color:white;
 }
 
+#modal_update{
+  background-color:black;
+  color:white;
+}
+
 form{
   margin-left: 20px;
   margin-bottom: 10px;
@@ -627,4 +634,9 @@ input[type="submit1"]:active {
   color:#133C7D;
   padding: 0px;
   margin: 0px;
+}
+
+
+h6 {
+  color: black;
 }
