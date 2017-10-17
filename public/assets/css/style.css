@@ -6,31 +6,356 @@
  * Made By MaterializeCSS.com
  */
 
-@media only screen and (max-width: 550px) {
-    #navText {
-        display:none;
+@media only screen and (max-width: 480px) and (min-width: 0px) {
+#leftText{
+      text-align: left !important;      
     }
+#map {
+   padding-right: 150px !important;
+   width: 600px !important;
+}
+
+ #colbtn{
+    margin-top: 20px;
+    font-size: 20px !important;
+    background-color: #133C7D;
+    width: 200px !important;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: -4px;
+}
+
+    #h5{
+      display: none !important;
+  
+    }
+    #nav{
+      text-align: center;
+      float: right;
+    }
+
 
     #navbtn {
       margin-top: 0px;
-      font-size: 20px;
+      font-size: 15px !important;
       background-color: #133C7D;
-      width: 300px;
+      width: 150px;
       padding-left: 0px;
-      margin-right: 110px;
- 
+      padding-right: 0px;
+      margin-right: 11px;
+      color: red;
     }
+    .material-icons{
+      color: red !important;
+      font-size: 40px !important;
+     
+    }
+
     .carousel{
       display: none;
     }
-    
-    #index-banner{
-      display: none;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+#leftText{
+      text-align: left !important;      
+    }
+#map {
+   padding-right: 200px !important;
+   width: 825px !important;
+}
+
+ #colbtn{
+    margin-top: 20px;
+    font-size: 15px !important;
+    background-color: #133C7D;
+    width: 150px !important;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: -4px;
+}
+
+    #h5{
+      font-size: 18px !important;
+      background-color: #282b30;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      width: 355px !important;
+      text-align: left !important;
+
+    }
+    #nav{
+      text-align: center;
+      float: right;
     }
 
+
+    #navbtn {
+      margin-top: 0px;
+      font-size: 15px;
+      background-color: #133C7D;
+      width: 180px;
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-right: 11px;
+      color: red;
+    }
+    .material-icons{
+      color: red !important;
+      font-size: 40px !important;
+     
+    }
+
+    .carousel{
+      display: none;
+    }
+}
+
+/*@media only screen and (max-width: 768px) and (min-width: 639px) {
+#leftText{
+      text-align: left !important;      
+    }
+#map {
+   padding-right: 175px !important;
+   width: 925px !important;
+}
+
+ #colbtn{
+    margin-top: 20px;
+    font-size: 18px !important;
+    background-color: #133C7D;
+    width: 10px !important;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+    #h5{
+      font-size: 18px !important;
+      background-color: #282b30;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      
+      text-align: left !important;
+    }
+    #nav{
+      text-align: center;
+      float: right;
+    }
+
+
+    #navbtn {
+      font-size: 18px;
+      background-color: #133C7D;
+      width: 100px;
+      color: red;
+    }
+    .material-icons{
+      color: red !important;
+      font-size: 40px !important;
+     
+    }
+
+    .carousel{
+      display: none;
+    }
+}*/
+
+@media only screen and (max-width: 980px) and (min-width: 769px) {
+#leftText{
+      text-align: center !important;      
+    }
+#map {
+  /* padding-right: 2000px !important;*/
+  width: 1450px !important;
+  padding-right: 0px;
 }
 
 
+ #colbtn{
+    margin-top: 20px;
+    font-size: 15px !important;
+    background-color: #133C7D;
+    width: 250px !important;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    
+}
+
+    #h5{
+      font-size: 15px;
+      background-color: #282b30;
+      font-family: 'Roboto', sans-serif;
+      color: white !important;
+      width: 560px !important;
+      text-align: left !important;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 979px) {
+#leftText{
+      text-align: left !important;      
+    }
+#map {
+   padding-right: 200px !important;
+   width: 1200px !important;
+}
+
+ #colbtn{
+    margin-top: 20px;
+    font-size: 20px !important;
+    background-color: #133C7D;
+    width: 225px !important;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 0px;
+    padding-right: 10px !important;
+    margin-right: 0px;
+}
+
+    #h5{
+      font-size: 20px;
+      background-color: #282b30;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      width: 700px !important;
+      text-align: left !important;
+    }
+    #nav{
+      text-align: center;
+      float: right;
+    }
+
+
+    #navbtn {
+      margin-top: 0px;
+      font-size: 15px;
+      background-color: #133C7D;
+      width: 200px;
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-right: 11px;
+      color: red;
+    }
+    .material-icons{
+      color: red !important;
+      font-size: 40px !important;
+     
+    }
+
+    .carousel{
+      display: none;
+    }
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 1023px) {
+#leftText{
+      text-align: left !important;      
+    }
+#map {
+   padding-right: 150px !important;
+   width: 1400px !important;
+}
+
+ #colbtn{
+    margin-top: 20px;
+    font-size: 20px !important;
+    background-color: #133C7D;
+    width: 225px !important;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 0px;
+    padding-right: 10px !important;
+    margin-right: 0px;
+}
+
+    #h5{
+      font-size: 20px;
+      background-color: #282b30;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      width: 960px;
+      text-align: left;
+    }
+    #nav{
+      text-align: center;
+      float: right;
+    }
+
+
+    #navbtn {
+      margin-top: 0px;
+      font-size: 15px;
+      background-color: #133C7D;
+      width: 200px;
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-right: 11px;
+      color: red;
+    }
+    .material-icons{
+      color: red !important;
+      font-size: 40px !important;
+     
+    }
+
+    .carousel{
+      display: none;
+    }
+}
+
+@media only screen and (max-width: 1680px) and (min-width: 1079px) {
+
+#map {
+   padding-right: 225px !important;
+   width: 1580px !important;
+  }
+}
+
+
+#h5{
+      font-size: 30px;
+      background-color: #282b30;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      margin-left: 50px;      
+      text-align: center;
+      }
+
+
+
+.right .material-icons{
+  font-size: 40px;
+  color: red !important;
+}
+
+#navIcon{
+  color: red;
+  font-size: 40px;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: 40px;
+  color: red;
+  
+
+}
 
 .carousel {
     overflow: hidden;
@@ -42,20 +367,12 @@
   }
 
 
-#nav{
+nav{
   background-color: #282b30;
-}
-
-#tColor{
-  padding-right: 10px;
-
-}
-
-#navText{
-  padding-left: 10px;
+  font-family: 'Roboto', sans-serif;
   color: white;
-  font-size: 20px;
 }
+
 
 #formText{
   color: white;
@@ -75,9 +392,10 @@
  span{
   display: inline-flex;
  }
+
 #navIcon{
   padding: 0px;
-  margin-top: -10px;
+  margin-top: 0px;
 }
 
 #colCenter{
@@ -86,12 +404,7 @@
 
 
 #map {
-  height: 400px;
-  width: 200000px;
-  margin: 0px;
-  padding: 0px;
-  float: left;
-  padding-right: 2000px;
+   padding-right: 500px;
 }
 
 body{
@@ -105,17 +418,11 @@ body{
   color: #26a69a;
 }
 
-#backImg {
-  background-position: 50% 100px !important;
-  height: 350px;
-  background-size: 100%;
-}
 
 #backImg1 {
   width: 100%;
   background-size: 100%;
-  background-position: 50% 100px !important
-  background-color:grey;
+  background-position: 50% 100px !important;
   padding-right:900px;
   opacity: 0.7;
   margin-left: 100px;
@@ -131,7 +438,8 @@ body{
     font-size: 20px;
     background-color: #133C7D;
     width: 300px;
-
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 .parallax-container {
@@ -144,35 +452,11 @@ body{
     width: 100%;
   }
 
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
-
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}
-
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: 40px;
-  color: #B11031;
-}
-
 footer.page-footer {
   margin: 0;
   background-color: #282828;
 }
-/*////////////////////////////////////////////////////////////////////*/
+
 input[type="text"],
 input[type="password"] {
   display: block;

@@ -15,615 +15,554 @@
 
 <body>
 
-<div class="navbar-fixed">
-    <nav>
-      <div id="nav" class="nav-wrapper">
-       <ul class="left">
-        <li id="navText"><h5>United Volunteer Rescue Association</h5></li>
-      </ul>
+  <div class="navbar-fixed">
+      <nav>
+        <div id="nav" class="nav-wrapper">
+         <ul class="left">
+          <li id="navText"><h5 id="h5">United Volunteer Rescue Association</h5></li>
+        </ul>
 
 
-      <ul class="right" id="alignMedia">
-        <!--nav modal buttons-->
-        <li>
-           <div class="icon-block">
-            <a id="navbtn" class="waves-effect waves-light btn btn-large" onclick="$('#modal3').modal('open');"><i class="material-icons right">warning</i>Rescue Me</a>
-
-
-        </li>
-        <!--User Story Modal in the nav bar-->
-       <!-- <li>
-              <div class="icon-block">
-              <a id="navbtn" class="waves-effect waves-light btn btn-large" onclick="$('#modal6').modal('open');"><i class="material-icons right">live_help</i>About Us</a>
-
-
-            </div>
-        </li>-->
-
-      </ul>
-
+        <ul class="right" id="alignMedia">
+          <!--nav modal buttons-->
+          <li>
+              <a id="navbtn" class="waves-effect waves-light btn btn-large" onclick="$('#modal3').modal('open');"><i id="navIcon" class="material-icons right">warning</i>Rescue Me</a>
+          </li>
+        </ul>
       </div>
     </nav>
   </div>
 <!-- nav modal structure-->
   <div id="modal3" class="modal">
-                <div class="modal-content" class="light">
-                  <h5 class="center">You have requested Volunteer Help</h5>
-                  <h5 class="center">We are searching for a Volunteer in your area</h5>
-                </div>
-                  <div class="row">
-                    <div class="col s2"></div>
-                        <div class="progress col s8" >
-                          <div class="indeterminate col s8"></div>
-                        </div>
-                  </div>
-                    <input id="cancelMe" type="submit1" class="modal-action modal-close" name="cancel_submit" value="Cancel" />
-              </div>
-            </div>
-
-
-
-
+    <div class="modal-content" class="light">
+      <h5 class="center">You have requested Volunteer Help</h5>
+      <h5 class="center">We are searching for a Volunteer in your area</h5>
+    </div>
+      <div class="row">
+        <div class="col s2"></div>
+        <div class="progress col s8" >
+          <div class="indeterminate col s8"></div>
+        </div>
+      </div>
+        <input id="cancelMe" type="submit1" class="modal-action modal-close" name="cancel_submit" value="Cancel">
+  </div>    
   <!-- Paralax main image with logo -->
 
 
- <div id="index-banner" class="parallax-container">
-
-    <div id="backImg" class="parallax"><img src="assets/volunteer_rescue_association.jpg" alt="Unsplashed background img 1"></div>
-
+  <div id="index-banner" class="parallax-container">
+    
+    <div id="backImg" class="parallax"><img id="backImg" src="assets/volunteer_rescue_association.jpg" alt="Unsplashed background img 1"></div>
+      
     <div materialize="carousel" class="carousel carousel-slider center" data-indicators="true">
-      <div class="carousel-item" href="#one!">
-    </div>
-    <div class="carousel-item" href="#two!">
-
-        <h5 id="backImg1"><b>Neighbors helping Neighbors</b></h5>
-
-    </div>
-    <div class="carousel-item" href="#three!">
-      <h5 id="backImg1"><b>Volunteer and Respond to Local Disaster Situations</b></h5>
-    </div>
-
-    <div class="carousel-item" href="#four!">
-       <h5 id="backImg1"><b>Get Rescued by Local Volunteers</b></h5>
-    </div>
-
-    <div class="carousel-item" href="#five!">
+      <div class="carousel-item" href="#one!"></div>
+      <div class="carousel-item" href="#two!">
+        <h5 id="backImg1"><b>Neighbors helping Neighbors</b></h5>  
+      </div>
+      <div class="carousel-item" href="#three!">
+        <h5 id="backImg1"><b>Volunteer and Respond to Local Disaster Situations</b></h5>
+      </div>
+      <div class="carousel-item" href="#four!">
+        <h5 id="backImg1"><b>Get Rescued by Local Volunteers</b></h5>
+      </div>
+      <div class="carousel-item" href="#five!">
         <h5 id="backImg1"><b>Recieve Regular Updates about Disasters</b></h5>
-    </div>
-
-    <div class="carousel-item" href="#six!">
+      </div>
+      <div class="carousel-item" href="#six!">
         <h5 id="backImg1"><b>Check Disaster Activity</b></h5>
+      </div>
     </div>
-
-</div>
-
   </div>
 
-  <div class="container">
+  <div class="container"> <!-- ///////////////////////////// -->
     <div class="section">
 
       <!--   Icon  & modal section   -->
       <div class="row">
-        <div class="col s12 m4">
+        <div class="col s12 m4">    
          <div class="icon-block">
-            <a id="colbtn" class="waves-effect waves-light btn btn-large" onclick="$('#modal1').modal('open');"><i class="material-icons right">add_box</i>Volunteer</a>
-            <p id="leftText" class="light">Sign Up to Volunteer</p>
-
-            <div id="modal1" class="modal">
-
-              <div class="modal-content">
-               <div class="row">
-
-
-    <form class="col s12">
-      <h5 id="formText">Disaster Volunteer Registration Form</h5>
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate" required>
-          <label for="first_name">First Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate" required>
-          <label for="last_name">Last Name</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="email" type="text" class="validate" required>
-          <label for="email">email</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="password" type="text" class="validate" required>
-          <label for="Password">Password</label>
-        </div>
-      </div>
-
-      <div class="row">
-         <div class="input-field col s6">
-          <input id="phoneNumber" type="text" class="validate" required>
-          <label for="phoneNumber">Phone Number</label>
-        </div>
-
-     </div>
-         <div class="row">
-         <div class="input-field col s12">
-          <input id="address" type="text" class="validate" required>
-          <label for="address">Street Address</label>
-        </div>
-     </div>
-
-<div class="row">
-         <div class="input-field col s5">
-          <input id="city" type="text" class="validate" required>
-          <label for="city">City</label>
-        </div>
-           <span class="col s5">
-            <select id="state" class="browser-default" required>
-            <option value="">State</option>
-            <option value= "1">Alabama</option>
-            <option value="2">Alaska</option>
-            <option value="3">Arizona</option>
-            <option value="4">Arkansas</option>
-            <option value="5">California</option>
-            <option value="6">Colorado</option>
-            <option value="7">Connecticut</option>
-            <option value="8">Delaware</option>
-            <option value="9">Florida</option>
-            <option value="10">Georgia</option>
-            <option value="11">Hawaii</option>
-            <option value="12">Idaho</option>
-            <option value="13">Illinois</option>
-            <option value="14">Indiana</option>
-            <option value="15">Iowa</option>
-            <option value="16">Kansas</option>
-            <option value="17">Kentucky</option>
-            <option value="18">Louisiana</option>
-            <option value="19">Maine</option>
-            <option value="20">Maryland</option>
-            <option value="21">Massachusetts</option>
-            <option value="22">Michigan</option>
-            <option value="23">Minnesota</option>
-            <option value="24">Mississippi</option>
-            <option value="25">Missouri</option>
-            <option value="26">Montana</option>
-            <option value="27">Nebraska</option>
-            <option value="28">Nevada</option>
-            <option value="29"> New Hampshire</option>
-            <option value="30">New Jersey</option>
-            <option value="31">New Mexico</option>
-            <option value="32">New York</option>
-            <option value="33">North Carolina</option>
-            <option value="34">North Dakota</option>
-            <option value="35">Ohio</option>
-            <option value="36">Oklahoma</option>
-            <option value="37">Oregon</option>
-            <option value="37">Pennsylvania</option>
-            <option value="39">Rhode Island</option>
-            <option value="40">South Carolina</option>
-            <option value="41">South Dakota</option>
-            <option value="42">Tennessee</option>
-            <option value="43">Texas</option>
-            <option value="44">Utah</option>
-            <option value="45">Vermont</option>
-            <option value="46">Virginia</option>
-            <option value="47">Washington</option>
-            <option value="48">West Virginia</option>
-            <option value="49">Wisconsin</option>
-            <option value="50">Wyoming</option>
-          </select>
-        </span>
-        <div class="input-field col s2">
-          <input id="zip" type="text" class="validate" required>
-          <label for="zip">Zip Code</label>
-        </div>
-     </div>
-
-     <div class="row">
-         <div class="input-field col s6">
-          <input id="emerg" type="text" class="validate" required>
-          <label for="emerg">Emergency Contact</label>
-        </div>
-          <div class="input-field col s3">
-          <input id="relationship" type="text" class="validate" required>
-          <label for="relationship">Relationship</label>
-        </div>
-        <div class="input-field col s3">
-          <input id="ePhone" type="text" class="validate" required>
-          <label for="ephone">Emergency Phone</label>
-        </div>
-     </div>
-     <div class="row">
-         <div class="input-field col s6">
-          <input id="travel" type="text" class="validate" required>
-          <label for="travel">How far are you willing to travel?</label>
-        </div>
-
-
-     </div>
-      <div class="row">
-        <h1>___________________________________________________________________________</h1>
-
-
-        <div id="formTextMonth" class="col s2">
-          Months you are available:
-          <p>
-            <input class = "month" type="checkbox" id="jan" />
-            <label for="jan">January </label>
-          </p>
-          <p>
-            <input class = "month" type="checkbox" id="feb" />
-            <label for="feb">February </label>
-          </p>
-          <p>
-            <input class = "month" type="checkbox" id="march" />
-            <label for="march">March</label>
-          </p>
-          <p>
-            <input class = "month" type="checkbox" id="april" />
-            <label for="april">April</label>
-          </p>
-          <p>
-            <input class = "month" type="checkbox" id="may" />
-            <label for="may">May</label>
-          </p>
-          <p>
-            <input class = "month" type="checkbox" id="june" />
-            <label for="june">June</label>
-          </p>
-        </div>
-         <div id="formTextMonth2" class="col s2">
-          <br>
-          <p>
-            <input class = "month" type="checkbox" id="july" />
-            <label for="july">July</label>
-          </p>
-          <p>
-            <input class = "month" type="checkbox" id="august" />
-            <label for="august">August</label>
-          </p>
-          <p>
-            <input class = "month" type="checkbox" id="sept" />
-            <label for="sept">September</label>
-          </p>
-          <p>
-            <input class = "month" type="checkbox" id="october" />
-            <label for="october">October</label>
-          </p>
-          <p>
-            <input class = "month" type="checkbox" id="nov" />
-            <label for="nov">November</label>
-          </p>
-          <p>
-            <input class = "month" type="checkbox" id="dec" />
-            <label for="dec">December</label>
-          </p>
-  </div>
-
-  <div id="formTextEquip" class="col s4">
-          Equipment and Special Skills/ Vocational/ Disaster Training:
-          <p>
-            <input class = "equip" type="checkbox" id="boat" />
-            <label for="boat">Boat </label>
-          </p>
-          <p>
-            <input class = "equip" type="checkbox" id="saw" />
-            <label for="saw">Chainsaw</label>
-          </p>
-          <p>
-            <input class = "equip" type="checkbox" id="roapR" />
-            <label for="roapR">Rope Rescue Equipment</label>
-          </p>
-          <p>
-            <input class = "equip" type="checkbox" id="truckPmp" />
-            <label for="truckPmp">Commercial Pumper Truck</label>
-          </p>
-          <p>
-            <input class = "equip" type="checkbox" id="highW" />
-            <label for="highW">High Water Vehicle</label>
-          </p>
-          <p>
-            <input class = "equip" type="checkbox" id="backH" />
-            <label for="backH">Backhoe</label>
-          </p>
-
-
-        </div>
-          <div id="formTextSkill" class="col s3">
-            <br>
-
-           <p>
-            <input class = "skills" type="checkbox" id="Vet" />
-            <label for="Vet">Veteran</label>
-          </p>
-          <p>
-            <input class = "skills" type="checkbox" id="ert" />
-            <label for="ert">Emergency Response Training "ERT"</label>
-          </p>
-          <p>
-            <input class = "skils" type="checkbox" id="nurse" />
-            <label for="nurse">Nurse </label>
-          </p>
-           <p>
-            <input class = "skils" type="checkbox" id="doc" />
-            <label for="doc">Doctor </label>
-          </p>
-          <p>
-            <input class = "skills" type="checkbox" id="vet" />
-            <label for="vet">Veterinarian</label>
-          </p>
-          <p>
-            <input class = "skills" type="checkbox" id="vetT" />
-            <label for="vetT">Veterinarian Tech</label>
-          </p>
-          <p>
-            <input class = "skills" type="checkbox" id="train" />
-            <label for="train">Animal Training/Behavior</label>
-          </p>
-          <p>
-            <input class = "skills" type="checkbox" id="drive" />
-            <label for="drive">Commercial Driver</label>
-          </p>
-  </div>
-            <div class="row">
-        <h1>___________________________________________________________________________</h1>
-        <h5 class="center">Notifications</h5><br><br>
-                  <p> Get regular notifications. Confirm and renew your volunteer membership</p>
-        <p id="modalNote">Frequency and confirmation</p>
-                 <form action="#">
-                       <p>
-                         <input type="checkbox" id="test5" />
-                         <label for="test5">Monthly</label>
-
-                          <input type="checkbox" id="test6" />
-                         <label for="test6">Quarterly</label>
-
-                          <input type="checkbox" id="test8" />
-                         <label for="test8">Local Disasters</label>
-
-                          <input type="checkbox" id="test7" />
-                         <label for="test7">Confirm that you want to remain a volunteer</label>
-                       </p>
-                        <input id="email" type="text" class="validate">
-                        <label for="email">Confirm your Email Address</label>
-                  </form>
-                </div>
-</div>
-</form>
-</div>
-                        <input id="addVol" type="submit" name="signup_submit" value="Sign me up" />
-              </div>
+            <div id="cbnt">
+              <a id="colbtn" class="waves-effect waves-light btn btn-large" onclick="$('#modal1').modal('open');"><i class="material-icons right">add_box</i>Volunteer</a>
+              <p id="leftText" class="light">Sign Up to Volunteer</p>
             </div>
+                
+            <div id="modal1" class="modal">
+              <div class="modal-content">
+                <div class="row">
+                  <form class="col s12">
+                    <h5 id="formText">Disaster Volunteer Registration Form</h5>
+                    <div class="row">
+                      <div class="input-field col s6">
+                        <input id="first_name" type="text" class="validate" required>
+                        <label for="first_name">First Name</label>
+                      </div>
+                      <div class="input-field col s6">
+                        <input id="last_name" type="text" class="validate" required>
+                        <label for="last_name">Last Name</label>
+                      </div>
+                    </div>
+                    
+                    <div class="row">
+                      <div class="input-field col s6">
+                        <input id="email" type="text" class="validate" required>
+                        <label for="email">email</label>
+                      </div>
+                      <div class="input-field col s6">
+                        <input id="password" type="text" class="validate" required>
+                        <label for="Password">Password</label>
+                      </div>
+                    </div>
 
-          </div>
-        </div>
+                    <div class="row">
+                       <div class="input-field col s6">
+                        <input id="phoneNumber" type="text" class="validate" required>
+                        <label for="phoneNumber">Phone Number</label>
+                      </div>                              
+                    </div> 
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input id="address" type="text" class="validate" required>
+                        <label for="address">Street Address</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s5">
+                        <input id="city" type="text" class="validate" required>
+                        <label for="city">City</label>
+                      </div>
+                      <span class="col s5"> 
+                        <select id="state" class="browser-default" required>
+                          <option value="">State</option>
+                          <option value= "1">Alabama</option>
+                          <option value="2">Alaska</option>
+                          <option value="3">Arizona</option>
+                          <option value="4">Arkansas</option>
+                          <option value="5">California</option>
+                          <option value="6">Colorado</option>
+                          <option value="7">Connecticut</option>
+                          <option value="8">Delaware</option>
+                          <option value="9">Florida</option>
+                          <option value="10">Georgia</option>
+                          <option value="11">Hawaii</option>
+                          <option value="12">Idaho</option>
+                          <option value="13">Illinois</option>
+                          <option value="14">Indiana</option>
+                          <option value="15">Iowa</option>
+                          <option value="16">Kansas</option>
+                          <option value="17">Kentucky</option>
+                          <option value="18">Louisiana</option>
+                          <option value="19">Maine</option>
+                          <option value="20">Maryland</option>
+                          <option value="21">Massachusetts</option>
+                          <option value="22">Michigan</option>
+                          <option value="23">Minnesota</option>
+                          <option value="24">Mississippi</option>
+                          <option value="25">Missouri</option>
+                          <option value="26">Montana</option>
+                          <option value="27">Nebraska</option>
+                          <option value="28">Nevada</option>
+                          <option value="29"> New Hampshire</option>
+                          <option value="30">New Jersey</option>
+                          <option value="31">New Mexico</option>
+                          <option value="32">New York</option>
+                          <option value="33">North Carolina</option>
+                          <option value="34">North Dakota</option>
+                          <option value="35">Ohio</option>
+                          <option value="36">Oklahoma</option>
+                          <option value="37">Oregon</option>
+                          <option value="37">Pennsylvania</option>
+                          <option value="39">Rhode Island</option>
+                          <option value="40">South Carolina</option>
+                          <option value="41">South Dakota</option>
+                          <option value="42">Tennessee</option>
+                          <option value="43">Texas</option>
+                          <option value="44">Utah</option>
+                          <option value="45">Vermont</option>
+                          <option value="46">Virginia</option>
+                          <option value="47">Washington</option>
+                          <option value="48">West Virginia</option>
+                          <option value="49">Wisconsin</option>
+                          <option value="50">Wyoming</option>
+                        </select>
+                      </span>
+                      <div class="input-field col s2">
+                        <input id="zip" type="text" class="validate" required>
+                        <label for="zip">Zip Code</label>
+                      </div>
+                    </div> 
+
+                    <div class="row">
+                      <div class="input-field col s6">
+                        <input id="emerg" type="text" class="validate" required>
+                        <label for="emerg">Emergency Contact</label>
+                      </div>
+                      <div class="input-field col s3">
+                        <input id="relationship" type="text" class="validate" required>
+                        <label for="relationship">Relationship</label>
+                      </div>
+                      <div class="input-field col s3">
+                        <input id="ePhone" type="text" class="validate" required>
+                        <label for="ephone">Emergency Phone</label>
+                      </div>
+                    </div> 
+                    <div class="row">
+                      <div class="input-field col s6">
+                        <input id="travel" type="text" class="validate" required>
+                        <label for="travel">How far are you willing to travel?</label>
+                      </div>                         
+                    </div> 
+                    <div class="row">
+                      <h1>___________________________________________________________________________</h1>
+                      <div id="formTextMonth" class="col s2">
+                        Months you are available:
+                        <p>        
+                          <input class = "month" type="checkbox" id="jan" />
+                          <label for="jan">January </label>
+                        </p> 
+                        <p>         
+                          <input class = "month" type="checkbox" id="feb" />
+                          <label for="feb">February </label>
+                        </p>
+                        <p>         
+                          <input class = "month" type="checkbox" id="march" />
+                          <label for="march">March</label>
+                        </p>
+                        <p>         
+                          <input class = "month" type="checkbox" id="april" />
+                          <label for="april">April</label>
+                        </p>
+                        <p>         
+                          <input class = "month" type="checkbox" id="may" />
+                          <label for="may">May</label>
+                        </p>
+                        <p>         
+                          <input class = "month" type="checkbox" id="june" />
+                          <label for="june">June</label>
+                        </p>
+                      </div>
+                      <div id="formTextMonth2" class="col s2">
+                        <br>
+                        <p>         
+                          <input class = "month" type="checkbox" id="july" />
+                          <label for="july">July</label>
+                        </p>
+                        <p>         
+                          <input class = "month" type="checkbox" id="august" />
+                          <label for="august">August</label>
+                        </p>
+                        <p>         
+                          <input class = "month" type="checkbox" id="sept" />
+                          <label for="sept">September</label>
+                        </p>
+                        <p>         
+                          <input class = "month" type="checkbox" id="october" />
+                          <label for="october">October</label>
+                        </p>
+                        <p>         
+                          <input class = "month" type="checkbox" id="nov" />
+                          <label for="nov">November</label>
+                        </p>
+                        <p>         
+                          <input class = "month" type="checkbox" id="dec" />
+                          <label for="dec">December</label>
+                        </p>
+                      </div>
+
+                      <div id="formTextEquip" class="col s4">
+                        Equipment and Special Skills/ Vocational/ Disaster Training:
+                        <p>         
+                          <input class = "equip" type="checkbox" id="boat" />
+                          <label for="boat">Boat </label>
+                        </p>
+                        <p>         
+                          <input class = "equip" type="checkbox" id="saw" />
+                          <label for="saw">Chainsaw</label>
+                        </p>
+                        <p>         
+                          <input class = "equip" type="checkbox" id="roapR" />
+                          <label for="roapR">Rope Rescue Equipment</label>
+                        </p>
+                        <p>         
+                          <input class = "equip" type="checkbox" id="truckPmp" />
+                          <label for="truckPmp">Commercial Pumper Truck</label>
+                        </p>
+                        <p>         
+                          <input class = "equip" type="checkbox" id="highW" />
+                          <label for="highW">High Water Vehicle</label>
+                        </p>
+                        <p>         
+                          <input class = "equip" type="checkbox" id="backH" />
+                          <label for="backH">Backhoe</label>
+                        </p>                  
+                      </div>
+                      <div id="formTextSkill" class="col s3">    
+                        <br>                             
+                        <p>         
+                          <input class = "skills" type="checkbox" id="Vet" />
+                          <label for="Vet">Veteran</label>
+                        </p>
+                        <p>         
+                          <input class = "skills" type="checkbox" id="ert" />
+                          <label for="ert">Emergency Response Training "ERT"</label>
+                        </p>
+                        <p>
+                          <input class = "skils" type="checkbox" id="nurse" />
+                          <label for="nurse">Nurse </label>
+                        </p>  
+                         <p>         
+                          <input class = "skils" type="checkbox" id="doc" />
+                          <label for="doc">Doctor </label>
+                        </p>
+                        <p>         
+                          <input class = "skills" type="checkbox" id="vet" />
+                          <label for="vet">Veterinarian</label>
+                        </p>
+                        <p>         
+                          <input class = "skills" type="checkbox" id="vetT" />
+                          <label for="vetT">Veterinarian Tech</label>
+                        </p>
+                        <p>         
+                          <input class = "skills" type="checkbox" id="train" />
+                          <label for="train">Animal Training/Behavior</label>
+                        </p>
+                        <p>         
+                          <input class = "skills" type="checkbox" id="drive" />
+                          <label for="drive">Commercial Driver</label>
+                        </p>
+                      </div>
+                      <div class="row">
+                        <h1>___________________________________________________________________________</h1>
+                        <h5 class="center">Notifications</h5><br><br>
+                        <p> Get regular notifications. Confirm and renew your volunteer membership</p>
+                        <p id="modalNote">Frequency and confirmation</p>
+                        <form action="#">
+                          <p>
+                            <input type="checkbox" id="test5" />
+                            <label for="test5">Monthly</label>
+                         
+                            <input type="checkbox" id="test6" />
+                            <label for="test6">Quarterly</label>
+                            
+                            <input type="checkbox" id="test8" />
+                            <label for="test8">Local Disasters</label>
+
+                            <input type="checkbox" id="test7" />
+                            <label for="test7">Confirm that you want to remain a volunteer</label>
+                          </p>
+                          <input id="email" type="text" class="validate">
+                          <label for="email">Confirm your Email Address</label>
+                        </form> 
+                      </div>
+                    </div>
+                  </form>
+                </div> <!-- ends the row     -->             
+                        <input id="addVol" type="submit" name="signup_submit" value="Sign me up" />
+              </div> <!-- ends modal content -->
+            </div> <!-- ends the modal///////////////////////////////// -->
+          </div> <!-- ends the icon block/////////////////////////////// -->
+        </div>  <!-- this div ends the col /////////////////////////////////// -->
       <!--     ////////////////////////////////////////////////////////////////////////////////// -->
 
         <div class="col s12 m4">
-         <div class="icon-block">
+          <div class="icon-block">
+           
             <a id="colbtn" class="waves-effect waves-light btn btn-large" onclick="$('#modal2').modal('open');"><i class="material-icons right">input</i>Sign In</a>
-            <p id="leftText" class="light">Sign into your account here.</p>
+            <p id="leftText" class="light">Sign into your account here.</p> 
+                  
             <div id="modal2" class="modal">
-
               <div class="modal-content">
                 <h5>Sign in</h5>
-                  <form action="#">
-                        <div class="row">
-                          <div class="input-field col s5">
-                            <input id="username" type="text" class="validate">
-                            <label for="username">User name or Email Address</label>
-                        </div>
-                            <div class="col s2"></div>
-                        <div class="input-field col s5">
-                            <input id="password" type="password" class="validate">
-                            <label for="password">Password</label>
-                        </div>
-                       <div class="row">
-                          <div class="input-field col s12">
-                        <span class="loginwith"><h5>Sign in with social network</h5></span><br />
-
-                        <button class="social-signin facebook">Facebook</button>
-                        <button class="social-signin twitter">Twitter</button>
-                        <button class="social-signin google">Google+</button>
-                        </div>
-                    </form>
-
-                        </div>
-                      </div>
-
-                        <input id="signIn" type="submit" name="signup_submit" value="Sign me in" />
+                <form action="#">
+                  <div class="row">
+                    <div class="input-field col s5">
+                      <input id="username" type="text" class="validate">
+                      <label for="username">User name or Email Address</label>
+                    </div>
+                    <div class="col s2"></div>
+                    <div class="input-field col s5">
+                      <input id="password" type="password" class="validate">
+                      <label for="password">Password</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <span class="loginwith"><h5>Sign in with social network</h5></span><br />
+                      <button class="social-signin facebook">Facebook</button>
+                      <button class="social-signin twitter">Twitter</button>
+                      <button class="social-signin google">Google+</button>
+                      <input id="signIn" type="submit" name="signup_submit" value="Sign me in" /> 
+                    </div>
+                  </div>
+                </form>
               </div>
-            </div>
-      </div>
+            </div> 
+          </div>
+        </div><!--  this div ends COL /////////////////////////////////////////////////////////// -->
+          
 
-        <!-- <div class="">
         <div class="col s12 m4">
           <div class="icon-block">
-            <a id="colbtn" class="waves-effect waves-light btn btn-large"><i class="material-icons right">link</i>Get Updates</a>
-            <p id="leftText" class="light">Sign up for updates.</p>
-          </div>
-          </div>
- -->
-
-        </div>
-        <div class="col s12 m4">
-         <div class="icon-block">
+            <div id="cbnt">
             <a id="colbtn" class="waves-effect waves-light btn btn-large" onclick="$('#modal4').modal('open');"><i class="material-icons right">link</i>Sign Up</a>
-             <p id="leftText" class="light">Sign up for rescue services</p>
+             <p id="leftText" class="light">Sign up for rescue services</p>   
+             </div> 
             <div id="modal4" class="modal">
 
               <div class="modal-content">
                 <h5>Sign up for rescue services</h5>
-                  <form>
-                        <div class="row">
-                          <div class="input-field col s5">
-                            <input id="firstname" type="text" class="validate">
-                            <label for="firstname">First Name</label>
-                        </div>
-                            <div class="col s2"></div>
-                        <div class="input-field col s5">
-                            <input id="lastname" type="text" class="validate">
-                            <label for="lastname">Last Name</label>
-                        </div>
-                        </div>
-
-                        <div class="row">
-                          <div class="input-field col s5">
-                            <input id="res_email" type="text" class="validate">
-                            <label for="email">Email Address</label>
-                        </div>
-                            <div class="col s2"></div>
-                        <div class="input-field col s5">
-                            <input id="res_password" type="password" class="validate">
-                            <label for="password">Password</label>
-                        </div>
-                        </div>
-
-                          <div class="row">
-                           <div class="input-field col s6">
-                            <input id="res_phoneNumber" type="text" class="validate" required>
-                            <label for="phoneNumber">Phone Number</label>
-                          </div>
-
-                       </div>
-                           <div class="row">
-                           <div class="input-field col s12">
-                            <input id="res_address" type="text" class="validate" required>
-                            <label for="address">Street Address</label>
-                          </div>
-                       </div>
+                <form>
+                  <div class="row">
+                    <div class="input-field col s5">
+                      <input id="firstname" type="text" class="validate">
+                      <label for="firstname">First Name</label>
+                    </div>
+                    <div class="col s2"></div>
+                    <div class="input-field col s5">
+                        <input id="lastname" type="text" class="validate">
+                        <label for="lastname">Last Name</label>
+                    </div>
+                  </div>
 
                   <div class="row">
-                           <div class="input-field col s5">
-                            <input id="res_city" type="text" class="validate" required>
-                            <label for="city">City</label>
-                          </div>
-                             <span class="col s5">
-                              <select id="res_state" class="browser-default" required>
-                              <option value="">State</option>
-                              <option id="Alabama" value="1">Alabama</option>
-                              <option id="Alaska" value="2">Alaska</option>
-                              <option id="Arizona" value="3">Arizona</option>
-                              <option id="Arkansas" value="4">Arkansas</option>
-                              <option id="California" value="5">California</option>
-                              <option id="Colorado" value="6">Colorado</option>
-                              <option id="Connecticut" value="7">Connecticut</option>
-                              <option id="Delaware" value="8">Delaware</option>
-                              <option id="Florida" value="9">Florida</option>
-                              <option id="Georgia" value="10">Georgia</option>
-                              <option id="Hawaii" value="11">Hawaii</option>
-                              <option id="Idaho" value="12">Idaho</option>
-                              <option id="Illinois" value="13">Illinois</option>
-                              <option id="Indiana" value="14">Indiana</option>
-                              <option id="Iowa" value="15">Iowa</option>
-                              <option id="Kansas" value="16">Kansas</option>
-                              <option id="Kentucky" value="17">Kentucky</option>
-                              <option id="Louisiana" value="18">Louisiana</option>
-                              <option id="Maine" value="19">Maine</option>
-                              <option id="Maryland" value="20">Maryland</option>
-                              <option id="Massachusetts" value="21">Massachusetts</option>
-                              <option id="Michigan" value="22">Michigan</option>
-                              <option id="Minnesota" value="23">Minnesota</option>
-                              <option id="Mississippi" value="24">Mississippi</option>
-                              <option id="Missouri" value="25">Missouri</option>
-                              <option id="Montana" value="26">Montana</option>
-                              <option id="Nebraska" value="27">Nebraska</option>
-                              <option id="Nevada" value="28">Nevada</option>
-                              <option id="New_Hampshire" value="29">New Hampshire</option>
-                              <option id="New_Jersey" value="30">New Jersey</option>
-                              <option id="New_Mexico" value="31">New Mexico</option>
-                              <option id="New_York" value="32">New York</option>
-                              <option id="North_Carolina" value="33">North Carolina</option>
-                              <option id="North_Dakota" value="34">North Dakota</option>
-                              <option id="Ohio" value="35">Ohio</option>
-                              <option id="Oklahoma" value="36">Oklahoma</option>
-                              <option id="Oregon" value="37">Oregon</option>
-                              <option id="Pennsylvania" value="37">Pennsylvania</option>
-                              <option id="Rhode_Island" value="39">Rhode Island</option>
-                              <option id="South_Carolina" value="40">South Carolina</option>
-                              <option id="South_Dakota" value="41">South Dakota</option>
-                              <option id="Tennessee" value="42">Tennessee</option>
-                              <option id="Texas" value="43">Texas</option>
-                              <option id="Utah" value="44">Utah</option>
-                              <option id="Vermont" value="45">Vermont</option>
-                              <option id="Virginia" value="46">Virginia</option>
-                              <option id="Washington" value="47">Washington</option>
-                              <option id="West_Virginia" value="48">West Virginia</option>
-                              <option id="Wisconsin" value="49">Wisconsin</option>
-                              <option id="Wyoming" value="50">Wyoming</option>
-                            </select>
-                          </span>
-                          <div class="input-field col s2">
-                            <input id="zip" type="text" class="validate" required>
-                            <label for="zip">Zip Code</label>
-                          </div>
-                       </div>
+                    <div class="input-field col s5">
+                      <input id="res_email" type="text" class="validate">
+                      <label for="email">Email Address</label>
+                    </div>
+                    <div class="col s2"></div>
+                    <div class="input-field col s5">
+                      <input id="res_password" type="password" class="validate">
+                      <label for="password">Password</label>
+                    </div>
+                  </div>
+                    
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input id="res_phoneNumber" type="text" class="validate" required>
+                      <label for="phoneNumber">Phone Number</label>
+                    </div>                      
+                  </div> 
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="res_address" type="text" class="validate" required>
+                      <label for="address">Street Address</label>
+                    </div>
+                  </div>
 
-                       <div class="row">
-                           <div class="input-field col s6">
-                            <input id="emerg" type="text" class="validate" required>
-                            <label for="emerg">Emergency Contact</label>
-                          </div>
-                            <div class="input-field col s3">
-                            <input id="relationship" type="text" class="validate" required>
-                            <label for="relationship">Relationship</label>
-                          </div>
-
-                        <div>
-                        <span class="loginwith">Sign Up with your favorite social network</span><br />
-
-                        <button class="social-signin facebook">Log in with facebook</button>
-                        <button class="social-signin twitter">Log in with Twitter</button>
-                        <button class="social-signin google">Log in with Google+</button>
-                        </div>
-
-                       </form>
-
-                        <input id="addResuceMe" type="submit" name="signup_submit" value="Sign Me Up!" />
-              </div>
+                  <div class="row">
+                    <div class="input-field col s5">
+                      <input id="res_city" type="text" class="validate" required>
+                      <label for="city">City</label>
+                    </div>
+                      <span class="col s5"> 
+                        <select id="res_state" class="browser-default" required>
+                          <option value="">State</option>
+                          <option id="Alabama" value="1">Alabama</option>
+                          <option id="Alaska" value="2">Alaska</option>
+                          <option id="Arizona" value="3">Arizona</option>
+                          <option id="Arkansas" value="4">Arkansas</option>
+                          <option id="California" value="5">California</option>
+                          <option id="Colorado" value="6">Colorado</option>
+                          <option id="Connecticut" value="7">Connecticut</option>
+                          <option id="Delaware" value="8">Delaware</option>
+                          <option id="Florida" value="9">Florida</option>
+                          <option id="Georgia" value="10">Georgia</option>
+                          <option id="Hawaii" value="11">Hawaii</option>
+                          <option id="Idaho" value="12">Idaho</option>
+                          <option id="Illinois" value="13">Illinois</option>
+                          <option id="Indiana" value="14">Indiana</option>
+                          <option id="Iowa" value="15">Iowa</option>
+                          <option id="Kansas" value="16">Kansas</option>
+                          <option id="Kentucky" value="17">Kentucky</option>
+                          <option id="Louisiana" value="18">Louisiana</option>
+                          <option id="Maine" value="19">Maine</option>
+                          <option id="Maryland" value="20">Maryland</option>
+                          <option id="Massachusetts" value="21">Massachusetts</option>
+                          <option id="Michigan" value="22">Michigan</option>
+                          <option id="Minnesota" value="23">Minnesota</option>
+                          <option id="Mississippi" value="24">Mississippi</option>
+                          <option id="Missouri" value="25">Missouri</option>
+                          <option id="Montana" value="26">Montana</option>
+                          <option id="Nebraska" value="27">Nebraska</option>
+                          <option id="Nevada" value="28">Nevada</option>
+                          <option id="New_Hampshire" value="29">New Hampshire</option>
+                          <option id="New_Jersey" value="30">New Jersey</option>
+                          <option id="New_Mexico" value="31">New Mexico</option>
+                          <option id="New_York" value="32">New York</option>
+                          <option id="North_Carolina" value="33">North Carolina</option>
+                          <option id="North_Dakota" value="34">North Dakota</option>
+                          <option id="Ohio" value="35">Ohio</option>
+                          <option id="Oklahoma" value="36">Oklahoma</option>
+                          <option id="Oregon" value="37">Oregon</option>
+                          <option id="Pennsylvania" value="37">Pennsylvania</option>
+                          <option id="Rhode_Island" value="39">Rhode Island</option>
+                          <option id="South_Carolina" value="40">South Carolina</option>
+                          <option id="South_Dakota" value="41">South Dakota</option>
+                          <option id="Tennessee" value="42">Tennessee</option>
+                          <option id="Texas" value="43">Texas</option>
+                          <option id="Utah" value="44">Utah</option>
+                          <option id="Vermont" value="45">Vermont</option>
+                          <option id="Virginia" value="46">Virginia</option>
+                          <option id="Washington" value="47">Washington</option>
+                          <option id="West_Virginia" value="48">West Virginia</option>
+                          <option id="Wisconsin" value="49">Wisconsin</option>
+                          <option id="Wyoming" value="50">Wyoming</option>
+                      </select>
+                    </span>
+                    <div class="input-field col s2">
+                      <input id="zip" type="text" class="validate" required>
+                      <label for="zip">Zip Code</label>
+                    </div>
+                  </div> 
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input id="emerg" type="text" class="validate" required>
+                      <label for="emerg">Emergency Contact</label>
+                    </div>
+                    <div class="input-field col s3">
+                      <input id="relationship" type="text" class="validate" required>
+                      <label for="relationship">Relationship</label>
+                    </div>
+                    <div>
+                      <span class="loginwith">Sign Up with your favorite social network</span><br />
+                      <button class="social-signin facebook">Log in with facebook</button>
+                      <button class="social-signin twitter">Log in with Twitter</button>
+                      <button class="social-signin google">Log in with Google+</button>
+                      <input id="addResuceMe" type="submit" name="signup_submit" value="Sign Me Up!" />
+                    </div>
+                  </div>      
+                </form>                        
+              </div> 
             </div>
-      </div>
-
-        <!-- <div class="">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <a id="colbtn" class="waves-effect waves-light btn btn-large"><i class="material-icons right">link</i>Get Updates</a>
-            <p id="leftText" class="light">Sign up for updates.</p>
-          </div>
-          </div>
- -->
-
-        </div>
-      </div>
+          </div> 
+        </div> 
       </div>
     </div>
   </div>
-
-
-      <!--   Icon Section   -->
-             <div class="col s12 m10">
-          <div class="icon-block">
-            <h5 id="leftText" class="center">See Active Sites Below</h5>
-          </div>
-        </div>
-
+ <!--   Icon Section   -->
+  <div class="col s12 m10">
+    <div class="icon-block">
+      <h5 id="leftText" class="center">See Active Sites Below</h5>
+    </div>
+  </div>      
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
-        <div class="row center">
-
+        <div class="row center">  
         </div>
       </div>
     </div>
-    <div id="map"></div>
+    <div id="map">
+      <iframe id="map" width="1850" height="400" src="http://google.org/crisismap/weather_and_events?hl=en&llbox=54.97%2C12.8%2C-32.82%2C-152.88&t=TERRAIN&layers=30%2C1%2C31%2C32%2C1340721332252%3A49%2C20%2C12%2Clayer9%2C2%2Clayer0%2Clayer8%2C13%2C1343411315379&embedded=true" style="border: 1px solid #ccc"></iframe>
+    </div>
   </div>
+
 
   <footer class="page-footer">
     <div class="container">
       <div class="row">
         <div class="col ml2 s12">
-          <h5 class="white-text">Disclaimer
-The United Volunteer Rescue Association is a tool used that connects individuals with volunteers in the event of a crisis situation. The United Volunteer Rescue Association is not responsible for personal injury up to and including death. If you are in immediate need of rescue, please call 911</h5>
+          <h5 class="white-text">Disclaimer:  The United Volunteer Rescue Association is a tool used that connects individuals with volunteers in the event of a crisis situation. The United Volunteer Rescue Association is not responsible for personal injury up to and including death. If you are in immediate need of rescue, please call 911</h5>
         </div>
       </div>
     </div>
@@ -633,13 +572,13 @@ The United Volunteer Rescue Association is a tool used that connects individuals
       </div>
     </div>
   </footer>
-  <!-- <script async defer
+  <script src="assets/js/index.js"></script>
+  <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAes8pj28HLstDedaTrJ02ftQYKoNCcaZ8&callback=initMap">
-  </script> -->
+  </script>
+  
   <script src="assets/js/materialize.js"></script>
   <script src="assets/js/init.js"></script>
   <script src="assets/js/data.js"></script>
-  <script type="text/javascript" src="assets/js/index.js"></script>
-
   </body>
 </html>
